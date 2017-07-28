@@ -1,0 +1,21 @@
+PODS:
+  - IQDropDownTextField (1.1.0)
+  - IQKeyboardManagerSwift (4.0.8)
+  - MBProgressHUD (1.0.0)
+  - PureLayout (3.0.2)
+
+DEPENDENCIES:
+  - IQDropDownTextField (~> 1.1)
+  - IQKeyboardManagerSwift (~> 4.0)
+  - MBProgressHUD (~> 1.0.0)
+  - PureLayout (~> 3.0)
+
+SPEC CHECKSUMS:
+  IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
+  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+
+PODFILE CHECKSUM: 4353cad09f50611e962f028034b0e5be25ae39f4
+
+COCOAPODS: 1.2.1
