@@ -8,11 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "UIViewController+Storyboard.h"
-
+#import "Hospital.h"
+#import "ApiRequest.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "UIAlertController+Blocks.h"
 
 @interface BaseViewController : UIViewController
 
+- (void)showHUD;
+
+- (void)hideHUD;
+
 -(void)showMenuButton;
+
 -(void)showBackButton;
+
+- (void)showMessage:(NSString *)title message:(NSString *)message;
 
 @end

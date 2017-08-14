@@ -12,6 +12,7 @@
 #import "UIViewController+Storyboard.h"
 #import "UIColor+Hex.h"
 #import "HomeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,26 +27,6 @@
     return YES;
 }
 
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    
-}
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    
-}
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    
-}
 - (void)setupHomeScreen {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    HomeViewController *vc = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
@@ -54,9 +35,9 @@
     [self.window makeKeyAndVisible];
 }
 
--(void)setupApplicationTheme{
-    [UINavigationBar appearance].barTintColor = [UIColor colorWithHex:0x2232a];
-    [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
+- (void)setupApplicationTheme {
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithHex:0xd2232a];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     NSDictionary *titleAttr=[[NSDictionary alloc]initWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes =titleAttr ;
 }

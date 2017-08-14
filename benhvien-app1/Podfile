@@ -8,4 +8,7 @@ pod 'PureLayout', '~> 3.0'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'IQKeyboardManagerSwift', '~> 4.0'
 pod 'IQDropDownTextField', '~> 1.1'
+pod 'KASlideShow', '~> 3.0'
+pod 'AFNetworking', '~> 3.0'
+pod 'SDWebImage', '3.8.2'
 end

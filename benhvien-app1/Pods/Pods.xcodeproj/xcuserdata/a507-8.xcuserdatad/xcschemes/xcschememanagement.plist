@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQDropDownTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KASlideShow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,15 +39,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0DE1CF36F8026ABF98F3903CB68E029F</key>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
+		<key>483FF9218104547720529AFE481F017C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +62,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2DA40C21D2A92A5549BA70AF01439F4</key>
+		<key>5ABD8D0E758C67B977551EB592056491</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93A67353D6C775CCEC153F92551399D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C6AD32235C68E82618C442A5559F12D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E767C5CA66E37AB95BDC3C34098D4325</key>
 		<dict>
 			<key>primary</key>
 			<true/>
