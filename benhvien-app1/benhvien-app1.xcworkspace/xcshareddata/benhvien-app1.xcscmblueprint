@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EE1891B170E23DADEE8C8F2B1E5329724B925C8B" : 9223372036854775807,
+    "4B289DFC193087F402E1ADD5783AAD783F1E1A71" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C55B0250-3E22-477A-B56F-FE8892E37E27",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EE1891B170E23DADEE8C8F2B1E5329724B925C8B" : "benhvien-app-design\/",
+    "4B289DFC193087F402E1ADD5783AAD783F1E1A71" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "benhvien-app1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "benhvien-app1.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nguyentankhoa1995\/benhvien-app1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4B289DFC193087F402E1ADD5783AAD783F1E1A71"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thienhaole92\/benhvien-app-design.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EE1891B170E23DADEE8C8F2B1E5329724B925C8B"
+    }
+  ]
+}

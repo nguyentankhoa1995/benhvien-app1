@@ -18,10 +18,24 @@
     [[ApiManager shareClient] requestApiWithEndpoint:Login method:POST parameters:parameters completion:completion];
 }
 
-+ (void)seachHospitalByName:(NSString *)name completionBlock:(ApiCompletionBlock)completion{
++ (void)searchHospitalByName:(NSString *)name completionBlock:(ApiCompletionBlock)completion{
     NSDictionary *parameters = @{@"name": name};
     [[ApiManager shareClient] requestApiWithEndpoint:SearchByName  method:GET parameters:parameters completion:completion];
 
 }
 
++ (void)getHospitalCompletionBlock:(ApiCompletionBlock)completion{
+    
+    [[ApiManager shareClient] requestApiWithEndpoint:Cities
+                                              method:GET
+                                          parameters:[NSDictionary new]
+                                          completion:completion];
+}
+
++ (void)searchHospitalByCityandDistrict:(NSString *)city district:(NSString *)district completionBlock:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"name":city,
+                               @"districtes":district,
+                               };
+    [[ApiManager shareClient]requestApiWithEndpoint:SearchByNameandDistrict method:GET parameters:parameters completion:completion];
+}
 @end

@@ -10,6 +10,9 @@
 #import "UIColor+Hex.h"
 #import "SearchResultViewController.h"
 #import "City.h"
+#import "UIAlertController+Blocks.h"
+#import "UIViewController+Storyboard.h"
+#import "ApiRequest.h"
 
 @interface AdvanceViewController ()<IQDropDownTextFieldDelegate>
 
@@ -47,7 +50,7 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"json" ];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSData *data = [myJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     NSArray *cityArray = [jsonDict objectForKey:@"cities"];
     for (NSDictionary *cityData in cityArray){
         City *city = [City initWithData:cityData];
@@ -56,6 +59,33 @@
     return cities;
 }
 
+- (void)getHospitalFromSever {
+    [self showHUD];
+    [ApiRequest getHospitalCompletionBlock:^(ApiResponse *response , NSError *error){
+        [self hideHUD];
+        if(error) {
+            [self showMessage:@"Loi" message:@"error"];
+            
+        }else {
+            NSMutableArray *cities = [NSMutableArray new];
+            NSArray *cityArray = [response.data objectForKey:@"cities"];
+            for (NSDictionary *cityData in cityArray){
+                City *city = [City initWithData:cityData];
+                [cities addObject:city];
+            }
+            _cities = cities;
+            [self setupDistrictDropDowm];
+    
+        }
+    }];
+}
+
+//- (void)getHospitalFromByCity {
+//    [self showHUD];
+//    [ApiRequest searchHospitalByCityandDistrict: district: completionBlock:^(ApiResponse *response , NSError *error){
+//    
+//    }];
+//}
 -(NSArray *)getCityNames {
     NSMutableArray *cityName = [NSMutableArray new];
     for(City *city in _cities){
@@ -67,14 +97,14 @@
 - (NSArray *)getDistrictNameFromCity:(City *)city {
     NSMutableArray *districtName = [NSMutableArray new];
     [districtName addObjectsFromArray:city.district];
-    [districtName insertObject:@"Tat ca Quan/Huyen" atIndex:0];
+    [districtName insertObject:@"Tất cả Quận/Huyện" atIndex:0];
     return [districtName mutableCopy];
 }
 - (void)setupDistrictDropDowm {
    self.cityPicker.isOptionalDropDown = NO;
     [self.cityPicker setItemList:[self getCityNames]];
     City *selectCity = (City *)_cities[0];
-    self.cityPicker.isOptionalDropDown = NO;
+    self.districPicker.isOptionalDropDown = NO;
     [self.districPicker setItemList:[self getDistrictNameFromCity:selectCity]];
     [self.districPicker setSelectedRow:0];
 }
@@ -90,8 +120,25 @@
     }
 }
 
+- (void)searchHospital:(NSString *)city district:(NSString *)district {
+    [self showHUD];
+    [ApiRequest searchHospitalByCityandDistrict:city district:district completionBlock:^(ApiResponse *response, NSError *error){
+        [self hideHUD];
+        NSLog(@"%@", response.originalResponse);
+        NSArray *hospitals = [response.data objectForKey:@"hospitals"];
+        if (hospitals.count > 0 ) {
+            NSLog(@"%@",hospitals);
+        }else  {
+            
+        }
+    }];
+}
+
+
+
 - (IBAction)findBtn:(id)sender {
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
     [self.navigationController pushViewController:vc animated:true];
+    [self searchHospital:_cityContentView district:_districContentView];
 }
 @end

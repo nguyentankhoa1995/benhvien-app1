@@ -15,4 +15,8 @@
 
 #define SearchByName                        @"hospitals-name"
 
+#define  Cities                             @"cities"
+
+#define SearchByNameandDistrict             @"hospitals-district-city"
+
 #endif /* ApiEndpoint_h */

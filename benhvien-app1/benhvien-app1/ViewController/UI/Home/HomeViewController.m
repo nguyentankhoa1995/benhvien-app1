@@ -41,13 +41,10 @@
 }
 
 - (IBAction)searchButton:(id)sender {
-    [self showHUD];
-//    [ApiRequest loginWithEmail:@"haole@gmail.com" password:@"111111" completionBlock:^(ApiResponse *respone, NSError *error ){
-//    
-//    }];
+   
     NSString *hospitalName = self.searchTextField.text;
     [self validateHospitalName:hospitalName completion:^(BOOL isValidate, NSString *message){
-        [self hideHUD];
+        
         if (isValidate){
             [self searchHospital: hospitalName];
             
@@ -62,20 +59,20 @@
 
 -(void)searchHospital:(NSString *)hospitalName{
  [self showHUD];
-    [ApiRequest seachHospitalByName:hospitalName completionBlock:^(ApiResponse * response, NSError *error){
+    [ApiRequest searchHospitalByName:hospitalName completionBlock:^(ApiResponse * response, NSError *error){
         [self hideHUD];
         NSArray *hospitals = [response.data objectForKey:@"hospitals"];
         if (hospitals.count <= 0) {
             [self showMessage:@"Thông báo" message:@"Không tìm thấy bệnh viện nào" ];
         }else {
-            self.hospitalDatas = [NSMutableArray new];
-            for (NSDictionary *hospitalData in hospitals) {
-                Hospital *hos = [Hospital initWithResponse:hospitalData];
-                [self.hospitalDatas addObject:hos];
+            NSMutableArray *hospitalData = [NSMutableArray new];
+            for (NSDictionary *data in hospitals) {
+                Hospital *hos = [Hospital initWithResponse:data];
+                [hospitalData addObject:hos];
                
                 
             }
-            [self passData];
+            [self passData:hospitalData];
         }
     }];
     
@@ -96,9 +93,9 @@
     [self.navigationController pushViewController:vc animated:true];
 }
 
-- (void)passData{
+- (void)passData :(NSMutableArray *)hospital{
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
-    vc.hospitalList = _hospitalDatas;
+    vc.hospitalList = hospital;
     [self.navigationController pushViewController:vc animated:true];
     
 }

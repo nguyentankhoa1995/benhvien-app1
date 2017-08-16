@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "benhvien-app1/Addvance/AdvanceViewController.h"
-            timestampString = "524413008.189701"
+            filePath = "benhvien-app1/Addvance/AdvanceViewController.m"
+            timestampString = "524585473.040574"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "districPicker"
-            landmarkType = "24">
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-findBtn:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

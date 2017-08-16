@@ -24,20 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Kết quả";
+    [self.resultTableView registerNib:[UINib nibWithNibName:@"HospitalTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    self.resultTableView.tableFooterView = [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)setUpUserInterface {
-    [self showBackButton];
-    self.resultTableView.estimatedRowHeight = 91.0;
-}
-
 - (void)setHospitalList:(NSMutableArray *)hospitalList{
     _hospitalList =  hospitalList;
     [self.resultTableView reloadData];
+}
+
+- (void)setUpUserInterface {
+    [self showBackButton];
+    self.resultTableView.estimatedRowHeight = 91.0;
 }
 
 #pragma TableView delegate
@@ -52,9 +54,7 @@
         cell= [[HospitalTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell" ];
     }
     Hospital *hos = _hospitalList[indexPath.row];
-    cell.hospitalNameLabel.text = hos.hospitalId;
-    cell.hospitalAddressLabel.text = hos.city;
-    cell.phonenumberLabel.text = hos.phones;
+    [cell setDataForCell:hos];
     return cell;
 }
 

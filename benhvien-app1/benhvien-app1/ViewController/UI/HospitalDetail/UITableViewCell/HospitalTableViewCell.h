@@ -20,4 +20,6 @@
 
 @property (weak,nonatomic)  IBOutlet UIImageView *hospitalImage;
 
+- (void)setDataForCell:(id)data;
+
 @end
