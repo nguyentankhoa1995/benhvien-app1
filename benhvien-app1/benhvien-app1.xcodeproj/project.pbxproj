@@ -11,7 +11,6 @@
 		EE31932F1F34994F0093E94C /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE31932E1F34994F0093E94C /* ApiManager.m */; };
 		EE3193321F3499680093E94C /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3193311F3499680093E94C /* ApiRequest.m */; };
 		EE3193381F34999E0093E94C /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3193371F34999D0093E94C /* ApiResponse.m */; };
-		EE3C1ECF1F31F34800F93EDB /* AdvanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1ECE1F31F34800F93EDB /* AdvanceViewController.m */; };
 		EE3C1EF91F31F58500F93EDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3C1EF81F31F58500F93EDB /* Home.storyboard */; };
 		EE3C1F421F31F62400F93EDB /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F241F31F62400F93EDB /* BaseNavigationController.m */; };
 		EE3C1F431F31F62400F93EDB /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F261F31F62400F93EDB /* BaseTabBarController.m */; };
@@ -22,7 +21,6 @@
 		EE3C1F481F31F62400F93EDB /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3C1F331F31F62400F93EDB /* AddressCell.xib */; };
 		EE3C1F491F31F62400F93EDB /* HospitalNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F351F31F62400F93EDB /* HospitalNameCell.m */; };
 		EE3C1F4A1F31F62400F93EDB /* HospitalNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3C1F361F31F62400F93EDB /* HospitalNameCell.xib */; };
-		EE3C1F4B1F31F62400F93EDB /* HospitalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F381F31F62400F93EDB /* HospitalTableViewCell.m */; };
 		EE3C1F4C1F31F62400F93EDB /* PhoneNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F3A1F31F62400F93EDB /* PhoneNumberCell.m */; };
 		EE3C1F4D1F31F62400F93EDB /* PhoneNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3C1F3B1F31F62400F93EDB /* PhoneNumberCell.xib */; };
 		EE3C1F4E1F31F62400F93EDB /* ThumbImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F3D1F31F62400F93EDB /* ThumbImageTableViewCell.m */; };
@@ -39,7 +37,9 @@
 		EE461E011F2B611600124E67 /* UIView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = EE461DFB1F2B611600124E67 /* UIView+Nib.m */; };
 		EE461E021F2B611600124E67 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EE461DFD1F2B611600124E67 /* UIViewController+Storyboard.m */; };
 		EE472E001F41CFAF00700401 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EE472DFF1F41CFAF00700401 /* City.m */; };
-		EE472E031F41D48A00700401 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = EE472E021F41D48A00700401 /* cities.json */; };
+		EE8E59CF1F46FBF100C3DBEC /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = EE8E59CE1F46FBF100C3DBEC /* cities.json */; };
+		EE8E59D31F47109B00C3DBEC /* AdvanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8E59D21F47109B00C3DBEC /* AdvanceViewController.m */; };
+		EE8E59D71F471D3B00C3DBEC /* HospitalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8E59D61F471D3B00C3DBEC /* HospitalTableViewCell.m */; };
 		EECF268A1F2F6B1C000A42BB /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF26851F2F6B1C000A42BB /* HLTableView.m */; };
 		EECF268B1F2F6B1C000A42BB /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF26871F2F6B1C000A42BB /* HLTableViewCell.m */; };
 		EECF268C1F2F6B1C000A42BB /* HLTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF26891F2F6B1C000A42BB /* HLTableViewSection.m */; };
@@ -55,8 +55,6 @@
 		EE3193311F3499680093E94C /* ApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiRequest.m; sourceTree = "<group>"; };
 		EE3193361F34999D0093E94C /* ApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiResponse.h; sourceTree = "<group>"; };
 		EE3193371F34999D0093E94C /* ApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiResponse.m; sourceTree = "<group>"; };
-		EE3C1ECD1F31F34800F93EDB /* AdvanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceViewController.h; sourceTree = "<group>"; };
-		EE3C1ECE1F31F34800F93EDB /* AdvanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceViewController.m; sourceTree = "<group>"; };
 		EE3C1EF81F31F58500F93EDB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EE3C1F231F31F62400F93EDB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		EE3C1F241F31F62400F93EDB /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
@@ -74,8 +72,6 @@
 		EE3C1F341F31F62400F93EDB /* HospitalNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalNameCell.h; sourceTree = "<group>"; };
 		EE3C1F351F31F62400F93EDB /* HospitalNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalNameCell.m; sourceTree = "<group>"; };
 		EE3C1F361F31F62400F93EDB /* HospitalNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalNameCell.xib; sourceTree = "<group>"; };
-		EE3C1F371F31F62400F93EDB /* HospitalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalTableViewCell.h; sourceTree = "<group>"; };
-		EE3C1F381F31F62400F93EDB /* HospitalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalTableViewCell.m; sourceTree = "<group>"; };
 		EE3C1F391F31F62400F93EDB /* PhoneNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberCell.h; sourceTree = "<group>"; };
 		EE3C1F3A1F31F62400F93EDB /* PhoneNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberCell.m; sourceTree = "<group>"; };
 		EE3C1F3B1F31F62400F93EDB /* PhoneNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneNumberCell.xib; sourceTree = "<group>"; };
@@ -105,7 +101,11 @@
 		EE461DFD1F2B611600124E67 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
 		EE472DFE1F41CFAF00700401 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		EE472DFF1F41CFAF00700401 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
-		EE472E021F41D48A00700401 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = "../../../benhvien-app-design/cities.json"; sourceTree = "<group>"; };
+		EE8E59CE1F46FBF100C3DBEC /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = SOURCE_ROOT; };
+		EE8E59D11F47109B00C3DBEC /* AdvanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceViewController.h; sourceTree = "<group>"; };
+		EE8E59D21F47109B00C3DBEC /* AdvanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceViewController.m; sourceTree = "<group>"; };
+		EE8E59D51F471D3B00C3DBEC /* HospitalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalTableViewCell.h; sourceTree = "<group>"; };
+		EE8E59D61F471D3B00C3DBEC /* HospitalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalTableViewCell.m; sourceTree = "<group>"; };
 		EECF26841F2F6B1C000A42BB /* HLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableView.h; sourceTree = "<group>"; };
 		EECF26851F2F6B1C000A42BB /* HLTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableView.m; sourceTree = "<group>"; };
 		EECF26861F2F6B1C000A42BB /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
@@ -159,15 +159,6 @@
 			path = "benhvien-app1/Api";
 			sourceTree = SOURCE_ROOT;
 		};
-		EE3C1ECC1F31F34800F93EDB /* Addvance */ = {
-			isa = PBXGroup;
-			children = (
-				EE3C1ECD1F31F34800F93EDB /* AdvanceViewController.h */,
-				EE3C1ECE1F31F34800F93EDB /* AdvanceViewController.m */,
-			);
-			path = Addvance;
-			sourceTree = "<group>";
-		};
 		EE3C1EF71F31F58500F93EDB /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +192,7 @@
 		EE3C1F291F31F62400F93EDB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EE8E59D01F47109B00C3DBEC /* Addvance */,
 				EE3C1F2A1F31F62400F93EDB /* Home */,
 				EE3C1F2D1F31F62400F93EDB /* HospitalDetail */,
 				EE3C1F3F1F31F62400F93EDB /* SearchResult */,
@@ -230,8 +222,6 @@
 		EE3C1F301F31F62400F93EDB /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				EE3C1F371F31F62400F93EDB /* HospitalTableViewCell.h */,
-				EE3C1F381F31F62400F93EDB /* HospitalTableViewCell.m */,
 				EE3C1F311F31F62400F93EDB /* AddressCell.h */,
 				EE3C1F321F31F62400F93EDB /* AddressCell.m */,
 				EE3C1F331F31F62400F93EDB /* AddressCell.xib */,
@@ -251,6 +241,7 @@
 		EE3C1F3F1F31F62400F93EDB /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				EE8E59D41F471D3B00C3DBEC /* TableViewCell */,
 				EE3C1F401F31F62400F93EDB /* SearchResultViewController.h */,
 				EE3C1F411F31F62400F93EDB /* SearchResultViewController.m */,
 			);
@@ -295,7 +286,6 @@
 				EE461DF11F2B611600124E67 /* Libraries */,
 				EE3C1EF71F31F58500F93EDB /* StoryBoards */,
 				EE3C1F511F31F63800F93EDB /* Models */,
-				EE3C1ECC1F31F34800F93EDB /* Addvance */,
 				EE3C1F211F31F62400F93EDB /* ViewController */,
 				EE461DD51F2B600F00124E67 /* Assets.xcassets */,
 				EE461DD71F2B600F00124E67 /* LaunchScreen.storyboard */,
@@ -359,9 +349,27 @@
 		EE472E011F41D46F00700401 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				EE472E021F41D48A00700401 /* cities.json */,
+				EE8E59CE1F46FBF100C3DBEC /* cities.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		EE8E59D01F47109B00C3DBEC /* Addvance */ = {
+			isa = PBXGroup;
+			children = (
+				EE8E59D11F47109B00C3DBEC /* AdvanceViewController.h */,
+				EE8E59D21F47109B00C3DBEC /* AdvanceViewController.m */,
+			);
+			path = Addvance;
+			sourceTree = "<group>";
+		};
+		EE8E59D41F471D3B00C3DBEC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE8E59D51F471D3B00C3DBEC /* HospitalTableViewCell.h */,
+				EE8E59D61F471D3B00C3DBEC /* HospitalTableViewCell.m */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		EECF26831F2F6B1C000A42BB /* Source */ = {
@@ -442,8 +450,8 @@
 				EE461DD61F2B600F00124E67 /* Assets.xcassets in Resources */,
 				EE3C1F4A1F31F62400F93EDB /* HospitalNameCell.xib in Resources */,
 				EE3C1F4F1F31F62400F93EDB /* ThumbImageTableViewCell.xib in Resources */,
-				EE472E031F41D48A00700401 /* cities.json in Resources */,
 				EE3C1EF91F31F58500F93EDB /* Home.storyboard in Resources */,
+				EE8E59CF1F46FBF100C3DBEC /* cities.json in Resources */,
 				EE3C1F481F31F62400F93EDB /* AddressCell.xib in Resources */,
 				EE3C1F4D1F31F62400F93EDB /* PhoneNumberCell.xib in Resources */,
 			);
@@ -510,7 +518,6 @@
 				EECF268B1F2F6B1C000A42BB /* HLTableViewCell.m in Sources */,
 				EE3C1F421F31F62400F93EDB /* BaseNavigationController.m in Sources */,
 				EE3C1F541F31F63800F93EDB /* Hospital.m in Sources */,
-				EE3C1ECF1F31F34800F93EDB /* AdvanceViewController.m in Sources */,
 				EE3C1F451F31F62400F93EDB /* HomeViewController.m in Sources */,
 				EE3C1F4C1F31F62400F93EDB /* PhoneNumberCell.m in Sources */,
 				EE3193321F3499680093E94C /* ApiRequest.m in Sources */,
@@ -518,6 +525,7 @@
 				EE3C1F471F31F62400F93EDB /* AddressCell.m in Sources */,
 				EE461DFE1F2B611600124E67 /* UIAlertController+Blocks.m in Sources */,
 				EE3C1F501F31F62400F93EDB /* SearchResultViewController.m in Sources */,
+				EE8E59D71F471D3B00C3DBEC /* HospitalTableViewCell.m in Sources */,
 				EE3C1F441F31F62400F93EDB /* BaseViewController.m in Sources */,
 				EE3C1F461F31F62400F93EDB /* HospitalDetailViewController.m in Sources */,
 				EECF268A1F2F6B1C000A42BB /* HLTableView.m in Sources */,
@@ -529,8 +537,8 @@
 				EECF268C1F2F6B1C000A42BB /* HLTableViewSection.m in Sources */,
 				EE31932F1F34994F0093E94C /* ApiManager.m in Sources */,
 				EE461DFF1F2B611600124E67 /* UIColor+Hex.m in Sources */,
-				EE3C1F4B1F31F62400F93EDB /* HospitalTableViewCell.m in Sources */,
 				EE3C1F4E1F31F62400F93EDB /* ThumbImageTableViewCell.m in Sources */,
+				EE8E59D31F47109B00C3DBEC /* AdvanceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

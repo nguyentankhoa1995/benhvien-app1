@@ -13,11 +13,8 @@
 @interface HospitalTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *hospitalNameLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *hospitalAddressLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *phonenumberLabel;
-
 @property (weak,nonatomic)  IBOutlet UIImageView *hospitalImage;
 
 - (void)setDataForCell:(id)data;

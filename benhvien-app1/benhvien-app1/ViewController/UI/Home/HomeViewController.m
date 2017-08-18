@@ -28,37 +28,27 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-   
 }
+
 - (void)setUpUserInterface {
-    _searchTextField.layer.cornerRadius = 4.0;
-    _searchTextField.layer.borderWidth = 0.5;
-    _searchTextField.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
     _searchButton.layer.cornerRadius = 4.0;
     _advanceSearchButton.layer.cornerRadius = 4.0;
-    self.searchImageView.layer.cornerRadius = 4.0;
     [self showMenuButton];
 }
 
 - (IBAction)searchButton:(id)sender {
-   
     NSString *hospitalName = self.searchTextField.text;
     [self validateHospitalName:hospitalName completion:^(BOOL isValidate, NSString *message){
-        
         if (isValidate){
             [self searchHospital: hospitalName];
-            
         }else{
             [self showMessage:@"Lỗi" message:message];
         }
-        
     }];
 }
 
-
-
--(void)searchHospital:(NSString *)hospitalName{
- [self showHUD];
+- (void)searchHospital:(NSString *)hospitalName {
+    [self showHUD];
     [ApiRequest searchHospitalByName:hospitalName completionBlock:^(ApiResponse * response, NSError *error){
         [self hideHUD];
         NSArray *hospitals = [response.data objectForKey:@"hospitals"];
@@ -69,16 +59,11 @@
             for (NSDictionary *data in hospitals) {
                 Hospital *hos = [Hospital initWithResponse:data];
                 [hospitalData addObject:hos];
-               
-                
             }
             [self passData:hospitalData];
         }
     }];
-    
 }
-
-
 
 - (void)validateHospitalName:(NSString *)name completion:(void (^)(BOOL isValidate, NSString *message))completion {
     if (!name || name.length == 0) {

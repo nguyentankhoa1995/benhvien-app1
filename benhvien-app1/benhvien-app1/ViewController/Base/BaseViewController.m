@@ -29,7 +29,7 @@
 }
 
 -(void)showBackButton {
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPresed:)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav-back"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPresed:)];
     self.navigationItem.leftBarButtonItem= backButton;
 
 }

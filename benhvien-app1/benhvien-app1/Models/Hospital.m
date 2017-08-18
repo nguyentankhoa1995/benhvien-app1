@@ -11,7 +11,7 @@
 
 @implementation Hospital 
 
-+(instancetype)initWithResponse:(NSDictionary *)response {
++ (instancetype)initWithResponse:(NSDictionary *)response {
     Hospital *res = [[Hospital alloc] init];
     [res parsenResponse:response];
     return res;
@@ -27,49 +27,49 @@
     if (avatar && ![avatar isKindOfClass:[NSNull class]]) {
         self.avatar = avatar;
     }else {
-        self.avatar =@"";
+        self.avatar = @"";
     }
     
     NSString *city = [response objectForKey:@"city"];
     if (city  && ![city isKindOfClass:[NSNull class]]) {
         self.city = city;
     }else {
-        self.avatar =@"";
+        self.city = @"";
     }
     
     NSString *hospitalDescription = [response objectForKey:@"description"];
     if (hospitalDescription && ![hospitalDescription isKindOfClass:[NSNull class]]) {
         self.hospitalDescipton = hospitalDescription;
     }else {
-        self.avatar =@"";
+        self.hospitalDescipton = @"";
     }
     
     NSString *district = [response objectForKey:@"district"];
     if (district  && ![district isKindOfClass:[NSNull class]]) {
         self.district = district;
     }else {
-        self.avatar =@"";
+        self.district = @"";
     }
     
     NSArray *images = [response objectForKey:@"images"];
     if (images  && ![images isKindOfClass:[NSNull class]]) {
         self.images = images;
     }else {
-        self.images =[NSArray new];
+        self.images = [NSArray new];
     }
     
     NSString *name = [response objectForKey:@"name"];
     if (name  && ![name isKindOfClass:[NSNull class]]) {
         self.name  = name;
     }else {
-        self.name =@"";
+        self.name = @"";
     }
     
     NSArray *phones = [response objectForKey:@"phones"];
     if (phones  && ![phones isKindOfClass:[NSNull class]]) {
         self.phones = phones;
     }else {
-        self.phones =[NSArray new];
+        self.phones = [NSArray new];
     }
     
     NSNumber *latitude = [response objectForKey:@"latitude"];
@@ -89,6 +89,5 @@
         self.street = @"";
     }
 }
-
 
 @end

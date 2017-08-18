@@ -13,8 +13,12 @@
 #import "UIAlertController+Blocks.h"
 #import "UIViewController+Storyboard.h"
 #import "ApiRequest.h"
+#import "Hospital.h"
 
 @interface AdvanceViewController ()<IQDropDownTextFieldDelegate>
+{
+    NSMutableArray *_cities;
+}
 
 @end
 
@@ -23,29 +27,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tìm kiếm nâng cao";
-   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 - (void)setUpUserInterface {
     [self showBackButton];
-    _cityContentView.layer.cornerRadius =4.0;
+    _cityContentView.layer.cornerRadius = 4.0;
     _cityContentView.layer.borderWidth = 0.5;
-    _cityContentView.layer.borderColor = [UIColor colorWithHex:0xC87CC].CGColor;
-    _districContentView.layer.cornerRadius =4.0;
+    _cityContentView.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
+    _districContentView.layer.cornerRadius = 4.0;
     _districContentView.layer.borderWidth = 0.5;
-    _districContentView.layer.borderColor = [UIColor colorWithHex:0xC87CC].CGColor;
-    _findButton.layer.cornerRadius = 4.0;
+    _districContentView.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
+    _searchButton.layer.cornerRadius = 4.0;
     _cities =  [self readCitiesFromFile];
     _cityPicker.delegate = self;
     _districPicker.delegate = self;
     [self setupDistrictDropDowm];
 }
 
--(NSMutableArray *)readCitiesFromFile {
+- (NSMutableArray *)readCitiesFromFile {
     NSMutableArray *cities = [NSMutableArray new];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"json" ];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
@@ -64,7 +67,7 @@
     [ApiRequest getHospitalCompletionBlock:^(ApiResponse *response , NSError *error){
         [self hideHUD];
         if(error) {
-            [self showMessage:@"Loi" message:@"error"];
+            [self showMessage:@"Loi" message:error.localizedDescription];
             
         }else {
             NSMutableArray *cities = [NSMutableArray new];
@@ -75,18 +78,11 @@
             }
             _cities = cities;
             [self setupDistrictDropDowm];
-    
         }
     }];
 }
 
-//- (void)getHospitalFromByCity {
-//    [self showHUD];
-//    [ApiRequest searchHospitalByCityandDistrict: district: completionBlock:^(ApiResponse *response , NSError *error){
-//    
-//    }];
-//}
--(NSArray *)getCityNames {
+- (NSArray *)getCityNames {
     NSMutableArray *cityName = [NSMutableArray new];
     for(City *city in _cities){
         [cityName addObject:city.name];
@@ -97,7 +93,7 @@
 - (NSArray *)getDistrictNameFromCity:(City *)city {
     NSMutableArray *districtName = [NSMutableArray new];
     [districtName addObjectsFromArray:city.district];
-    [districtName insertObject:@"Tất cả Quận/Huyện" atIndex:0];
+    [districtName insertObject:@"Tất cả Quận/Huyện" atIndex:0];
     return [districtName mutableCopy];
 }
 - (void)setupDistrictDropDowm {
@@ -109,7 +105,7 @@
     [self.districPicker setSelectedRow:0];
 }
 
-- (void)textField:(IQDropDownTextField *)textField didSelectItem:(NSString *)item{
+- (void)textField:(IQDropDownTextField *)textField didSelectItem:(NSString *)item {
     NSInteger selectIndex = textField.selectedRow;
     if(textField == _cityPicker) {
         City *city = _cities[selectIndex];
@@ -120,25 +116,68 @@
     }
 }
 
-- (void)searchHospital:(NSString *)city district:(NSString *)district {
+- (void)searchHospitalByCity:(NSString *)city {
     [self showHUD];
-    [ApiRequest searchHospitalByCityandDistrict:city district:district completionBlock:^(ApiResponse *response, NSError *error){
+    [ApiRequest searchHospitalByCity:city completionBlock:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
-        NSLog(@"%@", response.originalResponse);
-        NSArray *hospitals = [response.data objectForKey:@"hospitals"];
-        if (hospitals.count > 0 ) {
-            NSLog(@"%@",hospitals);
-        }else  {
-            
+        if (error) {
+            [self showMessage:@"Lỗi" message:error.localizedDescription];
+        }else {
+            NSArray *cityArray = [response.data objectForKey:@"city"];
+            if(cityArray.count > 0) {
+                NSMutableArray *cities = [NSMutableArray new];
+                for (NSDictionary *citiesData in cityArray ){
+                    City *city = [City initWithData:citiesData];
+                    [cities addObject: city];
+                }
+                [self goToSearchResultViewController:cities];
+            }else {
+                [self showMessage:@"Lỗi" message:@"Vui lòng nhập Quận hoặc Huyện bạn muốn tìm"];
+            }
         }
     }];
 }
 
-
-
-- (IBAction)findBtn:(id)sender {
-    SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
-    [self.navigationController pushViewController:vc animated:true];
-    [self searchHospital:_cityContentView district:_districContentView];
+- (void)searchHospital:(NSString *)city district:(NSString *)district {
+    [self showHUD];
+    [ApiRequest searchHospitalByCityandDistrict:city district:district completionBlock:^(ApiResponse *response, NSError *error){
+        [self hideHUD];
+        if(error) {
+            [self showMessage:@"Lỗi" message:error.localizedDescription];
+        }else {
+            if(response.success) {
+                NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
+                if(hospitalArray.count > 0) {
+                    NSMutableArray *hospitals = [NSMutableArray new];
+                    for (NSDictionary *hospitalsData in hospitalArray ){
+                        Hospital *hos = [Hospital initWithResponse:hospitalsData];
+                        [hospitals addObject: hos];
+                    }
+                    [self goToSearchResultViewController:hospitals];
+                }else {
+                    [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+                }
+            }else {
+                [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+            }
+        }
+    }];
 }
+
+- (void)goToSearchResultViewController:(NSMutableArray *)hospital{
+    SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
+    vc.hospitalList = hospital;
+    [self.navigationController pushViewController:vc animated:true];
+}
+
+- (IBAction)searchButtonPressed:(id)sender {
+    NSString *city = self.cityPicker.selectedItem;
+    NSString *district = self.districPicker.selectedItem;
+    if ([district isEqualToString:@"Tất cả Quận/Huyện"]) {
+        [self searchHospitalByCity:city];
+    }else {
+        [self searchHospital: city district:district];
+    }
+}
+
 @end

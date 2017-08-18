@@ -42,7 +42,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k4p-rq-dIZ">
                                 <rect key="frame" x="38" y="0.0" width="282" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">dgbxhjgjhxbcvagfc      gggggggggggggggggggggggfgfgdfgfgfgfdgfdgfdgrfgeret5regegfvfdgdfgergregfgxxcvsfdsffewfwwfdssdcreferfdscscs</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

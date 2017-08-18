@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.hospitalImage.layer.cornerRadius = 4.0;
+    self.hospitalImage.clipsToBounds = true;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

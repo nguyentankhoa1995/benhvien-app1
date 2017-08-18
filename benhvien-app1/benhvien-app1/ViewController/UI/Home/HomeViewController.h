@@ -13,19 +13,11 @@
 @interface HomeViewController :BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
-
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *advanceSearchButton;
+@property (nonatomic,strong) NSMutableArray *hospitalDatas;
 
 - (IBAction)advanceSearchButton:(id)sender;
-
 - (IBAction)searchButton:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UIButton *advanceSearchButton;
-
-@property (weak, nonatomic) IBOutlet UIImageView *searchImageView;
-
-- (void)validateHospitalName:(NSString *)name completion:(void (^)(BOOL isValidate, NSString *message))completion;
-
-@property (nonatomic,strong) NSMutableArray *hospitalDatas;
 
 @end

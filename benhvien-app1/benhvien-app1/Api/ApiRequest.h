@@ -20,4 +20,6 @@
 
 + (void)searchHospitalByCityandDistrict:(NSString *)city district:(NSString *)district completionBlock:(ApiCompletionBlock)completion ;
 
++ (void)searchHospitalByCity:(NSString *)city completionBlock:(ApiCompletionBlock)completion;
+
 @end

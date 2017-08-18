@@ -24,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Kết quả";
-    [self.resultTableView registerNib:[UINib nibWithNibName:@"HospitalTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.resultTableView.tableFooterView = [UIView new];
 }
 
