@@ -22,4 +22,6 @@
 
 + (void)searchHospitalByCity:(NSString *)city completionBlock:(ApiCompletionBlock)completion;
 
++ (void)getHospitalInfo:(NSString *)hospitalId completionBlock:(ApiCompletionBlock)completion;
+
 @end

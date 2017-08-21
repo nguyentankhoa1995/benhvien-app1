@@ -132,8 +132,7 @@
                 }
                 [self goToSearchResultViewController:cities];
             }else {
-                [self showMessage:@"Lỗi" message:@"Vui lòng nhập Quận hoặc Huyện bạn muốn tìm"];
-            }
+                           }
         }
     }];
 }

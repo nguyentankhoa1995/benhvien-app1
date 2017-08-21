@@ -6,45 +6,41 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="klp-NC-Eze">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhoneNumberCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhoneNumberCell" id="klp-NC-Eze" customClass="PhoneNumberCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="klp-NC-Eze" id="Yvc-Er-3GH">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-red-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CHs-j6-54G">
-                        <rect key="frame" x="5" y="5" width="20" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="4An-yC-16S"/>
-                            <constraint firstAttribute="width" constant="20" id="88c-b9-OLc"/>
-                            <constraint firstAttribute="height" constant="24" id="lhJ-1G-Vcd"/>
-                        </constraints>
+                        <rect key="frame" x="10" y="10" width="15" height="15"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08.39235791 - 39235821 - 39237007" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiK-Vj-udW">
-                        <rect key="frame" x="30" y="8" width="337" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="08.39235791 - 39235821 - 39237007" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiK-Vj-udW">
+                        <rect key="frame" x="35" y="0.0" width="330" height="34.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34.5" id="Kn6-GY-eww"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HiK-Vj-udW" firstAttribute="leading" secondItem="CHs-j6-54G" secondAttribute="trailing" constant="5" id="2JT-rD-Hc3"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="HiK-Vj-udW" secondAttribute="trailing" id="Hba-V2-9t0"/>
-                    <constraint firstItem="HiK-Vj-udW" firstAttribute="top" secondItem="Yvc-Er-3GH" secondAttribute="topMargin" id="Oqh-yb-zaX"/>
-                    <constraint firstItem="CHs-j6-54G" firstAttribute="leading" secondItem="Yvc-Er-3GH" secondAttribute="leading" constant="5" id="ViF-3T-MB9"/>
-                    <constraint firstItem="CHs-j6-54G" firstAttribute="top" secondItem="Yvc-Er-3GH" secondAttribute="top" constant="5" id="Wq4-ji-VLJ"/>
-                    <constraint firstItem="HiK-Vj-udW" firstAttribute="bottom" secondItem="Yvc-Er-3GH" secondAttribute="bottomMargin" id="qTX-QS-zad"/>
-                    <constraint firstAttribute="bottom" secondItem="CHs-j6-54G" secondAttribute="bottom" constant="5" id="qec-tt-PIT"/>
+                    <constraint firstItem="HiK-Vj-udW" firstAttribute="leading" secondItem="CHs-j6-54G" secondAttribute="trailing" constant="10" id="Dyq-nU-mtg"/>
+                    <constraint firstItem="CHs-j6-54G" firstAttribute="leading" secondItem="Yvc-Er-3GH" secondAttribute="leading" constant="10" id="E9P-1I-evH"/>
+                    <constraint firstAttribute="trailing" secondItem="HiK-Vj-udW" secondAttribute="trailing" constant="10" id="IWY-Hn-wNt"/>
+                    <constraint firstAttribute="bottom" secondItem="HiK-Vj-udW" secondAttribute="bottom" id="af3-bA-n4D"/>
+                    <constraint firstItem="HiK-Vj-udW" firstAttribute="top" secondItem="Yvc-Er-3GH" secondAttribute="top" id="ef3-Y0-uAc"/>
+                    <constraint firstItem="CHs-j6-54G" firstAttribute="top" secondItem="Yvc-Er-3GH" secondAttribute="top" constant="10" id="s4h-Fj-naD"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="1.5" y="-30"/>
+            <accessibility key="accessibilityConfiguration" identifier="PhoneNumberCell"/>
+            <point key="canvasLocation" x="1.5" y="-30.5"/>
         </tableViewCell>
     </objects>
     <resources>

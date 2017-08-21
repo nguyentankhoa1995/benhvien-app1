@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HLTableViewCell.h"
 
-@interface HospitalNameCell : UITableViewCell
+@interface HospitalNameCell : HLTableViewCell
 
 @end

@@ -44,4 +44,10 @@
     [[ApiManager shareClient] requestApiWithEndpoint:SearchHospitalCity method:GET parameters:paramenters completion:completion];
 }
 
++ (void)getHospitalInfo:(NSString *)hospitalId completionBlock:(ApiCompletionBlock)completion {
+    NSDictionary *paramenters = @{@"id":hospitalId};
+    [[ApiManager shareClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:paramenters completion:completion];
+}
+
+
 @end

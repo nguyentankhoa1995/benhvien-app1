@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HLTableViewCell.h"
 
-@interface ThumbImageTableViewCell : UITableViewCell
+@interface ThumImageTableViewCell : HLTableViewCell
 
 @property (strong,nonatomic) NSString *tableViewHeaderIndentifier;
 

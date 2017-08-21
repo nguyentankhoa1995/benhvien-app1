@@ -6,9 +6,9 @@
 //
 //
 
-#import "ThumbImageTableViewCell.h"
+#import "ThumImageTableViewCell.h"
 
-@implementation ThumbImageTableViewCell
+@implementation ThumImageTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
