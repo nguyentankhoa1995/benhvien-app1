@@ -50,7 +50,7 @@
             break;
         }
         case PUT: {
-            
+            [self processPostRequestWith:fullURL parameters:parameters completion:completion];
             break;
         }
         default:

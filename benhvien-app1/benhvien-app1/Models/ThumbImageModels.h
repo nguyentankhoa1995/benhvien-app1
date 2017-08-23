@@ -10,4 +10,6 @@
 
 @interface ThumbImageModels : NSObject
 
+@property (strong, nonatomic) NSString *hospitalDescipton;
+
 @end

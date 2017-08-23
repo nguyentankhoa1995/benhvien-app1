@@ -14,6 +14,4 @@
 
 @property (weak, nonatomic) IBOutlet KASlideShow *slideShow;
 
-
-
 @end

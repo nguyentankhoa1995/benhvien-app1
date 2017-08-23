@@ -10,4 +10,6 @@
 
 @interface PhoneNumberModel : NSObject
 
+@property (strong, nonatomic) NSArray *phones;
+
 @end

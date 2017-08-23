@@ -7,6 +7,7 @@
 //
 
 #import "PhoneNumberCell.h"
+#import "Hospital.h"
 
 @implementation PhoneNumberCell
 
@@ -18,4 +19,15 @@
     [super setSelected:selected animated:animated];
 }
 
+- (void)configureCell:(id)data {
+    Hospital *hospital = (Hospital *)data;
+    if(hospital.phones[0]){
+        self.hospitalPhoneLabel.text = hospital.phones[0];
+    }else{
+        self.hospitalPhoneLabel.text = @"-";
+    }
+
+}
 @end
+
+  

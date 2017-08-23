@@ -12,5 +12,6 @@
 @interface ThumImageTableViewCell : HLTableViewCell
 
 @property (strong,nonatomic) NSString *tableViewHeaderIndentifier;
+@property (weak, nonatomic) IBOutlet UITextView *hospitalLocationTextView;
 
 @end

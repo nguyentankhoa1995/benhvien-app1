@@ -12,7 +12,6 @@
 
 @interface HospitalDetailViewController : BaseViewController
 
-
 @property (weak, nonatomic) IBOutlet HLTableView *contentView;
 @property (strong, nonatomic) Hospital *hospital;
 

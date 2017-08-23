@@ -41,6 +41,9 @@
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="ThumImageTableViewCell"/>
+            <connections>
+                <outlet property="hospitalLocationTextView" destination="B5S-k3-DBI" id="Mny-UD-lvS"/>
+            </connections>
             <point key="canvasLocation" x="12.5" y="-287"/>
         </tableViewCell>
     </objects>

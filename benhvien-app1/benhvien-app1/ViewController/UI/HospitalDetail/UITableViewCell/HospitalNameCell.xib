@@ -36,6 +36,9 @@
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="HospitalNameCell"/>
+            <connections>
+                <outlet property="hospitalNameLabel" destination="5Tq-ub-Vby" id="eBY-7o-kig"/>
+            </connections>
             <point key="canvasLocation" x="-25" y="-177"/>
         </tableViewCell>
     </objects>

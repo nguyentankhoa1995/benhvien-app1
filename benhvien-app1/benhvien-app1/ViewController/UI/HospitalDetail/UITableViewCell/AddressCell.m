@@ -7,6 +7,7 @@
 //
 
 #import "AddressCell.h"
+#import "Hospital.h"
 
 @implementation AddressCell
 
@@ -16,6 +17,13 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
+
+- (void)configureCell:(NSString *)data {
+    Hospital *hospital = (Hospital *)data;
+    if (hospital) {
+        self.hospitalAddressLabel.text = hospital.street ;
+    }
 }
 
 @end

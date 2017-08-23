@@ -20,6 +20,8 @@
 - (void)parsenResponse:(NSDictionary *)response {
     NSString *hospitalId = [response objectForKey:@"_id"];
     if (hospitalId && ![hospitalId isKindOfClass:[NSNull class]]) {
+       self.hospitalId = hospitalId;
+    }else {
         self.hospitalId = @"";
     }
     

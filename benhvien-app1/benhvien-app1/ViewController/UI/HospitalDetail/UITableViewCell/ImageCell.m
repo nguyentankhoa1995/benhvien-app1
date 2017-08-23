@@ -19,13 +19,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self setupSlideShow:datasource];
-    });
 }
-
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -41,7 +35,6 @@
 }
 
 - (void)setupSlideShow:(NSArray *)images {
-    datasource = [images mutableCopy];
     datasource = [NSMutableArray new];
     for (NSString *url in images) {
         [datasource addObject:[NSURL URLWithString:url]];
@@ -50,7 +43,7 @@
     _slideShow.datasource = self;
     _slideShow.delegate = self;
     [_slideShow setDelay:2];
-    [_slideShow setTransitionDuration:1];
+    [_slideShow setTransitionDuration:0.5];
     [_slideShow setTransitionType:KASlideShowTransitionSlideHorizontal];
     [_slideShow setImagesContentMode:UIViewContentModeScaleAspectFill];
     [_slideShow start];

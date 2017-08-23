@@ -289,18 +289,18 @@
 				EE3C1F531F31F63800F93EDB /* Hospital.m */,
 				EE472DFE1F41CFAF00700401 /* City.h */,
 				EE472DFF1F41CFAF00700401 /* City.m */,
-				EEAF4D2C1F4AFC7700E106B3 /* ThumbImageModels.h */,
-				EEAF4D2D1F4AFC7700E106B3 /* ThumbImageModels.m */,
+				EEAF4D351F4AFCB900E106B3 /* ImageModel.h */,
+				EEAF4D361F4AFCB900E106B3 /* ImageModel.m */,
 				EEAF4D2F1F4AFC9A00E106B3 /* HospitalNameModel.h */,
 				EEAF4D301F4AFC9A00E106B3 /* HospitalNameModel.m */,
 				EEAF4D321F4AFCAB00E106B3 /* PhoneNumberModel.h */,
 				EEAF4D331F4AFCAB00E106B3 /* PhoneNumberModel.m */,
-				EEAF4D351F4AFCB900E106B3 /* ImageModel.h */,
-				EEAF4D361F4AFCB900E106B3 /* ImageModel.m */,
 				EEAF4D381F4AFCC800E106B3 /* AddressModel.h */,
 				EEAF4D391F4AFCC800E106B3 /* AddressModel.m */,
 				EEAF4D3B1F4AFCD100E106B3 /* MapModel.h */,
 				EEAF4D3C1F4AFCD100E106B3 /* MapModel.m */,
+				EEAF4D2C1F4AFC7700E106B3 /* ThumbImageModels.h */,
+				EEAF4D2D1F4AFC7700E106B3 /* ThumbImageModels.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";

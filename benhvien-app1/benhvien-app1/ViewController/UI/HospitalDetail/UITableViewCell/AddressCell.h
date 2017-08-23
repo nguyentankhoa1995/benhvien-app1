@@ -11,4 +11,6 @@
 
 @interface AddressCell : HLTableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *hospitalAddressLabel;
+
 @end

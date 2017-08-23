@@ -28,20 +28,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self setupContentView];
-   
+    [self setupContentView];
+    [self getHospitalId:_hospital.hospitalId];
 }
 
 - (void)getHospitalId:(NSString *)hospitalId {
     [self showHUD];
     [ApiRequest getHospitalInfo:hospitalId completionBlock:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
         if(error) {
-            [self showMessage:@"Loi" message:error.localizedDescription];
+            [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
             if (response.success) {
                 Hospital *hospital = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
+                [self displayHospitalInfo:hospital];
             }else {
-                [self showMessage:@"Loi" message:response.message];
+                [self showMessage:@"Lỗi" message:response.message];
             }
         }
     }];
@@ -50,25 +52,29 @@
 - (void)displayHospitalInfo:(Hospital *)hospitalId {
     NSMutableArray *objArray = [NSMutableArray new];
     ImageModel *model1 = [ImageModel new];
-    model1.images = _hospital.images;
+    model1.images = hospitalId.images;
     [objArray addObject:model1];
     
     HospitalNameModel *model2 = [HospitalNameModel new];
+    model2.name = hospitalId.name;
     [objArray addObject:model2];
     
     AddressModel *model3 = [AddressModel new];
+    model3.street = hospitalId.street;
     [objArray addObject:model3];
     
     PhoneNumberModel *model4 = [PhoneNumberModel new];
+    model4.phones = hospitalId.phones;
     [objArray addObject:model4];
     
     ThumbImageModels *model5 = [ThumbImageModels new];
+    model5.hospitalDescipton = hospitalId.hospitalDescipton;
     [objArray addObject:model5];
     
     MapModel *model6 = [MapModel new];
     [objArray addObject:model6];
     
-    [self.contentView addItems:[self getData]];
+    [self.contentView addItems:objArray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,7 +95,6 @@
     [self.contentView registerCell:[PhoneNumberCell class] forModel:[PhoneNumberModel class]];
     [self.contentView registerCell:[ThumImageTableViewCell class] forModel:[ThumbImageModels class]];
     [self.contentView registerCell:[MapCell class] forModel:[MapModel class]];
-    
 }
 
 - (NSArray *)getData {

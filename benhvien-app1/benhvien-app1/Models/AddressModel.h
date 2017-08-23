@@ -10,4 +10,6 @@
 
 @interface AddressModel : NSObject
 
+@property (strong, nonatomic) NSString *street;
+
 @end

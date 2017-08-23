@@ -40,6 +40,9 @@
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="PhoneNumberCell"/>
+            <connections>
+                <outlet property="hospitalPhoneLabel" destination="HiK-Vj-udW" id="IOF-5a-ubS"/>
+            </connections>
             <point key="canvasLocation" x="1.5" y="-30.5"/>
         </tableViewCell>
     </objects>

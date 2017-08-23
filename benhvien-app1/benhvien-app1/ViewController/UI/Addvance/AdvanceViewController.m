@@ -67,7 +67,7 @@
     [ApiRequest getHospitalCompletionBlock:^(ApiResponse *response , NSError *error){
         [self hideHUD];
         if(error) {
-            [self showMessage:@"Loi" message:error.localizedDescription];
+            [self showMessage:@"Lỗi" message:error.localizedDescription];
             
         }else {
             NSMutableArray *cities = [NSMutableArray new];
@@ -96,6 +96,7 @@
     [districtName insertObject:@"Tất cả Quận/Huyện" atIndex:0];
     return [districtName mutableCopy];
 }
+
 - (void)setupDistrictDropDowm {
    self.cityPicker.isOptionalDropDown = NO;
     [self.cityPicker setItemList:[self getCityNames]];
@@ -123,16 +124,17 @@
         if (error) {
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
-            NSArray *cityArray = [response.data objectForKey:@"city"];
+            NSArray *cityArray = [response.data objectForKey:@"hospitals"];
             if(cityArray.count > 0) {
                 NSMutableArray *cities = [NSMutableArray new];
                 for (NSDictionary *citiesData in cityArray ){
-                    City *city = [City initWithData:citiesData];
+                    Hospital *city = [Hospital initWithResponse:citiesData];
                     [cities addObject: city];
                 }
                 [self goToSearchResultViewController:cities];
             }else {
-                           }
+                [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+            }
         }
     }];
 }

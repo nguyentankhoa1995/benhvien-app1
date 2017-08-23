@@ -25,7 +25,6 @@
 }
 
 + (void)getHospitalCompletionBlock:(ApiCompletionBlock)completion{
-    
     [[ApiManager shareClient] requestApiWithEndpoint:Cities
                                               method:GET
                                           parameters:[NSDictionary new]
