@@ -7,18 +7,33 @@
 //
 
 #import "MapCell.h"
+#import "Hospital.h"
+#import "MapModel.h"
 
 @implementation MapCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
+- (void)configureCell:(id)model {
+    MapModel *hos = (MapModel *)model;
+    if(hos) {
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:hos.latitude longitude:hos.longtitude zoom:15];
+        
+        GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+        
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = camera.target;
+        marker.snippet = @"Hello World";
+        marker.appearAnimation = kGMSMarkerAnimationPop;
+        marker.map = mapView;
+        
+        self.MapView = mapView;
+    }
+}
 @end

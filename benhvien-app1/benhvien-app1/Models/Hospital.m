@@ -79,7 +79,7 @@
         self.latitude = [latitude doubleValue];
     }
     
-    NSNumber *longtitude = [response objectForKey:@"longtitude"];
+    NSNumber *longtitude = [response objectForKey:@"longitude"];
     if (longtitude  && ![longtitude isKindOfClass:[NSNull class]]) {
         self.longtitude = [longtitude doubleValue];
     }

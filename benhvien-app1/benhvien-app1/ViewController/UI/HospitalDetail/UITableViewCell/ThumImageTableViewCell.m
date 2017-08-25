@@ -8,6 +8,7 @@
 
 #import "ThumImageTableViewCell.h"
 #import "Hospital.h"
+#import "ThumbImageModels.h"
 
 @implementation ThumImageTableViewCell
 
@@ -19,8 +20,8 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCell:(NSString *)data {
-    Hospital *hospital = (Hospital *)data;
+- (void)configureCell:(id)model {
+    ThumbImageModels *hospital = (ThumbImageModels *)model;
     if (hospital) {
         self.hospitalLocationTextView.text = hospital.hospitalDescipton ;
     }

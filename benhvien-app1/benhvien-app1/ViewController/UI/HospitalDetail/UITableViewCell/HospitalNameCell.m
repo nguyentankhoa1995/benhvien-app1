@@ -10,6 +10,7 @@
 #import "HospitalNameModel.h"
 #import "SearchResultViewController.h"
 #import "HomeViewController.h"
+#import "HospitalNameModel.h"
 
 @implementation HospitalNameCell
 
@@ -21,8 +22,8 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCell:(id)data {
-    Hospital *hospital = (Hospital *)data;
+- (void)configureCell:(id)model {
+    HospitalNameModel *hospital = (HospitalNameModel *)model;
     if (hospital) {
         self.hospitalNameLabel.text = hospital.name;
     }

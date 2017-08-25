@@ -15,21 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5By-PK-5t9" id="IXN-sC-ObB">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-la-S1U" customClass="KASlideShow">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="MUZ-s8-ABQ"/>
+                            <constraint firstAttribute="height" constant="300" id="5xY-ol-V7Q"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="5wD-ty-m6o"/>
-                    <constraint firstItem="uuy-la-S1U" firstAttribute="leading" secondItem="IXN-sC-ObB" secondAttribute="leading" id="NTP-tu-enS"/>
-                    <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="cgB-TI-bDx"/>
-                    <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="zdN-Gv-N2L"/>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="leading" secondItem="IXN-sC-ObB" secondAttribute="leading" id="FrV-ip-WcS"/>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="G3s-VO-34g"/>
+                    <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="Zu4-rT-5w7"/>
+                    <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="aOO-eC-jVj"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

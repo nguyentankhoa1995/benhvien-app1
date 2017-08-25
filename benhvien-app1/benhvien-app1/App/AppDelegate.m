@@ -12,6 +12,8 @@
 #import "UIViewController+Storyboard.h"
 #import "UIColor+Hex.h"
 #import "HomeViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
+#import "ApiEndpoint.h"
 
 @interface AppDelegate ()
 
@@ -23,8 +25,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
     [self setupHomeScreen];
-    
+    [self setupApplicationData];
     return YES;
+}
+
+- (void)setupApplicationData {
+    [GMSServices provideAPIKey:GoogleApiKey];
+    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
 }
 
 - (void)setupHomeScreen {

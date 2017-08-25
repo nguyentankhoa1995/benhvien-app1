@@ -121,6 +121,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tỉnh / Thành Phố" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yck-sk-Mml" customClass="IQDropDownTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                        <color key="textColor" red="0.32941176470588235" green="0.33725490196078434" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -148,6 +149,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tất cả Quận / Huyện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Af5-5P-Dbd" customClass="IQDropDownTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                        <color key="textColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -229,13 +231,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: 01345687" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIe-fa-cao">
-                                                    <rect key="frame" x="90" y="65" width="245" height="14.5"/>
+                                                    <rect key="frame" x="90" y="65" width="245" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:292 Tran Hung Dao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-Ha-zix">
-                                                    <rect key="frame" x="90" y="47.5" width="245" height="14.5"/>
+                                                    <rect key="frame" x="90" y="47" width="245" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -359,6 +361,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uel-Sj-R4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-40638" y="37"/>
+        </scene>
+        <!--Direction View Controller-->
+        <scene sceneID="DjG-mj-XOM">
+            <objects>
+                <viewController storyboardIdentifier="DirectionViewController" id="UDX-P4-oSD" customClass="DirectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3AF-Um-tCV"/>
+                        <viewControllerLayoutGuide type="bottom" id="MB8-RY-7jp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qQ3-Eu-G4t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAd-sb-lLA" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="DirectionViewController"/>
+                        <constraints>
+                            <constraint firstItem="gAd-sb-lLA" firstAttribute="leading" secondItem="qQ3-Eu-G4t" secondAttribute="leading" id="0Pe-Ul-qq6"/>
+                            <constraint firstAttribute="trailing" secondItem="gAd-sb-lLA" secondAttribute="trailing" id="2ye-X2-Thj"/>
+                            <constraint firstItem="MB8-RY-7jp" firstAttribute="top" secondItem="gAd-sb-lLA" secondAttribute="bottom" id="l4B-NR-uhy"/>
+                            <constraint firstItem="gAd-sb-lLA" firstAttribute="top" secondItem="qQ3-Eu-G4t" secondAttribute="top" id="nb3-dk-iCQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="gAd-sb-lLA" id="5tc-tZ-6w2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCh-sJ-r8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39988" y="44"/>
         </scene>
     </scenes>
     <resources>

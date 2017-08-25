@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OCGoogleDirectionsAPI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-benhvien-app1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +57,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>13F02540FC8A0CF43F5ABC1D3650B5FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2CFBE04C4DB3E0AFB9C86CEA6B4065C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D588DED3520843A6FE7E69E583C1DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
@@ -72,11 +92,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A556C6023649FD9965F44C23484A1887</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
 		<dict>
 			<key>primary</key>
@@ -88,11 +103,6 @@
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E7AB76D8E0E202E8AE38C87DA225C3F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

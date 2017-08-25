@@ -8,6 +8,7 @@
 
 #import "AddressCell.h"
 #import "Hospital.h"
+#import "AddressModel.h"
 
 @implementation AddressCell
 
@@ -19,8 +20,8 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCell:(NSString *)data {
-    Hospital *hospital = (Hospital *)data;
+-  (void)configureCell:(id)model {
+    AddressModel *hospital = (AddressModel *)model;
     if (hospital) {
         self.hospitalAddressLabel.text = hospital.street ;
     }

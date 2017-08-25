@@ -19,6 +19,7 @@
 #import "PhoneNumberModel.h"
 #import "MapModel.h"
 #import "ImageModel.h"
+#import "DirectionViewController.h"
 
 @interface HospitalDetailViewController ()
 
@@ -30,6 +31,7 @@
     [super viewDidLoad];
     [self setupContentView];
     [self getHospitalId:_hospital.hospitalId];
+    [self showDirectionButton];
 }
 
 - (void)getHospitalId:(NSString *)hospitalId {
@@ -50,6 +52,7 @@
 }
 
 - (void)displayHospitalInfo:(Hospital *)hospitalId {
+    self.contentView.hidden = false;
     NSMutableArray *objArray = [NSMutableArray new];
     ImageModel *model1 = [ImageModel new];
     model1.images = hospitalId.images;
@@ -72,6 +75,8 @@
     [objArray addObject:model5];
     
     MapModel *model6 = [MapModel new];
+    model6.longtitude = hospitalId.longtitude;
+    model6.latitude = hospitalId.latitude;
     [objArray addObject:model6];
     
     [self.contentView addItems:objArray];
@@ -81,9 +86,21 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)showDirectionButton {
+    UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(directionButtonPresed:)];
+    self.navigationItem.rightBarButtonItem= button;
+    
+}
+
+- (IBAction)directionButtonPresed:(id)sender {
+    DirectionViewController *vc = (DirectionViewController *)[DirectionViewController instanceFromStoryboardName:@"Home"];
+    vc.hospital = _hospital;
+    [self.navigationController showViewController:vc sender:nil];
+}
 - (void)setUpUserInterface {
     [self showBackButton];
     self.title = self.hospital.name;
+    [self showDirectionButton];
 }
 
 - (void)setupContentView {
@@ -95,6 +112,7 @@
     [self.contentView registerCell:[PhoneNumberCell class] forModel:[PhoneNumberModel class]];
     [self.contentView registerCell:[ThumImageTableViewCell class] forModel:[ThumbImageModels class]];
     [self.contentView registerCell:[MapCell class] forModel:[MapModel class]];
+    self.contentView.hidden = true;
 }
 
 - (NSArray *)getData {

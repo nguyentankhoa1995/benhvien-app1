@@ -10,4 +10,7 @@
 
 @interface MapModel : NSObject
 
+@property (nonatomic) double latitude;
+@property (nonatomic) double longtitude;
+
 @end
