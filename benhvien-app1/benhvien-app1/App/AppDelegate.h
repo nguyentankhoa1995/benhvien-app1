@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
+#import "AppInfoViewController.h"
+#import "BaseTabBarController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

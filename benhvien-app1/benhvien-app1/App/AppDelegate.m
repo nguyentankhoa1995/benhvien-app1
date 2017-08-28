@@ -24,7 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
-    [self setupHomeScreen];
+    [self setupHomeScreen1];
     [self setupApplicationData];
     return YES;
 }
@@ -39,6 +39,21 @@
    HomeViewController *vc = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setupHomeScreen1 {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    HomeViewController *homeVC = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *homeNav = [[BaseNavigationController alloc] initWithRootViewController:homeVC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    AppInfoViewController *appInfoVC = (AppInfoViewController *)[AppInfoViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *appInfonNav = [[BaseNavigationController alloc] initWithRootViewController:appInfoVC];
+    
+    BaseTabBarController *tab = [BaseTabBarController new];
+    tab.viewControllers = @[homeNav , appInfonNav];
+    self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
 }
 

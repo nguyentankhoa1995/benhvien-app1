@@ -42,8 +42,9 @@
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
             if (response.success) {
-                Hospital *hospital = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
-                [self displayHospitalInfo:hospital];
+                Hospital *hospitalData = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
+                [self displayHospitalInfo:hospitalData];
+                self.hospital = hospitalData;
             }else {
                 [self showMessage:@"Lỗi" message:response.message];
             }
@@ -102,6 +103,7 @@
     self.title = self.hospital.name;
     [self showDirectionButton];
 }
+
 
 - (void)setupContentView {
     self.contentView.rowHeight = UITableViewAutomaticDimension;

@@ -45,7 +45,7 @@
     [locationManager startUpdatingLocation];
 }
 
--(void)drawDirectionPathWithOriginLocation:(CLLocation *)origin destinationLocation:(CLLocation *)destination {
+- (void)drawDirectionPathWithOriginLocation:(CLLocation *)origin destinationLocation:(CLLocation *)destination {
     OCDirectionsRequest *request = [OCDirectionsRequest requestWithOriginLocation:origin andDestinationLocation:destination];
     OCDirectionsAPIClient *client = [OCDirectionsAPIClient new];
     [self showHUD];
@@ -55,9 +55,12 @@
             if (error) {
                 return;
             }
+            
             if(response.status != OCDirectionsResponseStatusOK) {
-                return;
+                
+                return ;
             }
+            
             NSArray *routesArray = response.routes;
             GMSPolyline *polyline = nil;
             if (routesArray.count > 0) {
@@ -68,9 +71,15 @@
                 polyline = [GMSPolyline polylineWithPath:path];
             }
             if (polyline) {
+//                polyline.map = self.mapView;
+//                polyline.strokeColor =  [UIColor blackColor];
+                GMSMarker *marker = [GMSMarker new];
+                marker.position = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude);
+                marker.appearAnimation = kGMSMarkerAnimationPop;
+                marker.icon = [UIImage imageNamed:@"flag_icon"];
+                marker.map = _mapView;
                 polyline.map = self.mapView;
             }
-
         });
     }];
 }

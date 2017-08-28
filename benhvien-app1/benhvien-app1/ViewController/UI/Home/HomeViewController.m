@@ -14,6 +14,7 @@
 #import "BaseViewController.h"
 #import "Hospital.h"
 #import "SearchResultViewController.h"
+#import "DirectionViewController.h"
 
 @interface HomeViewController ()<UITextFieldDelegate>
 

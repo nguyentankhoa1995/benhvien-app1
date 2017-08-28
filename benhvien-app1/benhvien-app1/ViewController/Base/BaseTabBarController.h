@@ -10,4 +10,8 @@
 
 @interface BaseTabBarController : UITabBarController
 
+@property(assign,nonatomic) BOOL menuDisplayed;
+
+- (void)animatedMenu:(BOOL)displayed;
+
 @end

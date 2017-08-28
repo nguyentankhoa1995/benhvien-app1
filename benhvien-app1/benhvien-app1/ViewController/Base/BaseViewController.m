@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "BaseTabBarController.h"
 
 @interface BaseViewController ()
 
@@ -35,7 +36,8 @@
 }
 
 -(IBAction)menuButtonPresent:(id)sender {
-    
+    BaseTabBarController *tab = (BaseTabBarController *)self.tabBarController;
+    [tab animatedMenu:!tab.menuDisplayed];
 }
 
 -(IBAction)backButtonPresed:(id)sender {
