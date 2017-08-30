@@ -8,10 +8,13 @@
 
 #import "BaseTabBarController.h"
 #import "MenuView.h"
+#import <PureLayout/PureLayout.h>
 
 @interface BaseTabBarController ()
 
 @property(strong,nonatomic) MenuView *menuView;
+@property(strong,nonnull) UIWindow *window;
+@property(assign,nonatomic) BOOL didUpdateConstrians;
 
 @end
 
@@ -19,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBar.hidden = true;
     [self setupMenuView];
 }
 
@@ -27,17 +31,33 @@
 }
 
 - (void)setupMenuView {
+    NSArray *hosArray = @[@{@"icon":@"search-btn-icon", @"title":@"Tìm kiếm"},
+                          @{@"icon":@"information-menu-icon", @"title":@"Thông tin"}];
     NSArray *nibViews = [[NSBundle mainBundle]loadNibNamed:@"MenuView" owner:self options:nil];
     _menuView = (MenuView *)[nibViews objectAtIndex:0];
-    UIWindow *window = [[[UIApplication sharedApplication] delegate]window];
-    [window addSubview:_menuView];
+   self.window = [[[UIApplication sharedApplication] delegate]window];
+    [self.window addSubview:_menuView];
+    [_menuView setupMenuView];
+    _menuView.menuItems = hosArray;
+    __weak BaseTabBarController *wSelf = self;
+    [_menuView setOnDidSelectItemAtIndex:^(NSUInteger index) {
+        [wSelf didSelectMenuAtIndenx:index];
+    }];
+}
+
+- (void)updateViewConstraints {
+    [_menuView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_window];
+    [_menuView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:_window];
+    [_menuView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:_window];
+    [_menuView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:_window];
+    [super updateViewConstraints];
 }
 
 - (void)animatedMenu:(BOOL)displayed {
     _menuDisplayed = displayed;
     CGFloat duration = 0.3;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat posX = (300.0/385.0) * screenWidth;
+    CGFloat posX = (300.0/375.0) * screenWidth;
     CGRect frame = self.view.frame;
     if (displayed) {//open menu
         frame.origin.x = posX;
@@ -49,4 +69,15 @@
     }];
 }
 
+- (void)didSelectMenuAtIndenx:(NSInteger)menuIndex {
+    [self animatedMenu:!self.menuDisplayed];
+    self.selectedIndex = menuIndex;
+}
+
+- (void)closeSideMenuBar {
+        
+}
+
 @end
+
+

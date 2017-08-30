@@ -11,11 +11,8 @@
 @interface ApiResponse : NSObject
 
 @property (strong,nonatomic) NSString *message;
-
 @property (nonatomic) BOOL success;
-
 @property (strong , nonatomic) id data;
-
 @property (strong , nonatomic) NSDictionary *originalResponse;
 
 +(instancetype)initWithResponse:(NSDictionary *)response;

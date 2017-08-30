@@ -98,12 +98,12 @@
     vc.hospital = _hospital;
     [self.navigationController showViewController:vc sender:nil];
 }
+
 - (void)setUpUserInterface {
     [self showBackButton];
     self.title = self.hospital.name;
     [self showDirectionButton];
 }
-
 
 - (void)setupContentView {
     self.contentView.rowHeight = UITableViewAutomaticDimension;

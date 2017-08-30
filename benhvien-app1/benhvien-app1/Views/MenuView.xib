@@ -15,14 +15,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="side-menu-bg" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-TF-vQH">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-menu-bg" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-TF-vQH">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fhT-TI-CtO">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fhT-TI-CtO">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
             </subviews>
@@ -31,15 +30,19 @@
                 <accessibilityTraits key="traits" image="YES"/>
             </accessibility>
             <constraints>
-                <constraint firstItem="fhT-TI-CtO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2HM-Kf-76w"/>
-                <constraint firstItem="fhT-TI-CtO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Egq-M5-XUw"/>
-                <constraint firstAttribute="trailing" secondItem="fhT-TI-CtO" secondAttribute="trailing" id="bqq-sX-XAb"/>
-                <constraint firstAttribute="bottom" secondItem="fhT-TI-CtO" secondAttribute="bottom" id="jYS-z9-4jo"/>
+                <constraint firstItem="fhT-TI-CtO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MHn-48-EHF"/>
+                <constraint firstAttribute="bottom" secondItem="c2q-TF-vQH" secondAttribute="bottom" id="ZI8-Um-0ec"/>
+                <constraint firstItem="fhT-TI-CtO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dqx-GE-1ie"/>
+                <constraint firstAttribute="trailing" secondItem="fhT-TI-CtO" secondAttribute="trailing" id="eCq-6N-EEo"/>
+                <constraint firstItem="c2q-TF-vQH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gAQ-ca-VeM"/>
+                <constraint firstAttribute="bottom" secondItem="fhT-TI-CtO" secondAttribute="bottom" id="jZz-kL-pO7"/>
+                <constraint firstAttribute="trailing" secondItem="c2q-TF-vQH" secondAttribute="trailing" id="jvR-ig-Ur1"/>
+                <constraint firstItem="c2q-TF-vQH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="v0D-zf-2E6"/>
             </constraints>
             <connections>
                 <outlet property="menuTableView" destination="fhT-TI-CtO" id="lc6-jr-mi7"/>
             </connections>
-            <point key="canvasLocation" x="-759" y="-96"/>
+            <point key="canvasLocation" x="-949" y="-100"/>
         </view>
     </objects>
     <resources>

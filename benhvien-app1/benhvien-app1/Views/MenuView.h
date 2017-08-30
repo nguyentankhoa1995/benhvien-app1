@@ -12,6 +12,7 @@
 
 @property (strong,nonatomic) NSArray *menuItems;
 @property (weak,nonatomic) IBOutlet UITableView *menuTableView;
+@property (copy,nonatomic) void (^onDidSelectItemAtIndex)(NSUInteger index);
 
 - (void)setupMenuView;
 

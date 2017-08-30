@@ -15,6 +15,7 @@
 
 @property (strong,nonatomic) Hospital *hospital;
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+
 - (void)drawDirectionPathWithOriginLocation:(CLLocation *)origin destinationLocation:(CLLocation *)destination;
 
 @end

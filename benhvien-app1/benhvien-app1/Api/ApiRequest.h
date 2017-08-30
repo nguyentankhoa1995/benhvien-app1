@@ -13,15 +13,10 @@
 @interface ApiRequest : NSObject
 
 + (void)loginWithEmail:(NSString *)email password:(NSString *)password completionBlock:(ApiCompletionBlock)completion;
-
 + (void)searchHospitalByName:(NSString *)name completionBlock:(ApiCompletionBlock)completion;
-
 + (void)getHospitalCompletionBlock:(ApiCompletionBlock)completion;
-
 + (void)searchHospitalByCityandDistrict:(NSString *)city district:(NSString *)district completionBlock:(ApiCompletionBlock)completion ;
-
 + (void)searchHospitalByCity:(NSString *)city completionBlock:(ApiCompletionBlock)completion;
-
 + (void)getHospitalInfo:(NSString *)hospitalId completionBlock:(ApiCompletionBlock)completion;
 
 @end

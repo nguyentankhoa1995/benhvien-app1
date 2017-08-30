@@ -22,12 +22,12 @@
 
 - (void)setDataForCell:(id)data{
     Hospital *hospital = (Hospital *)data;
-    if(hospital){
+    if(hospital) {
         [self.hospitalImage sd_setImageWithURL:[NSURL URLWithString:hospital.avatar]];
         self.hospitalNameLabel.text = hospital.name;
         if(hospital.phones[0]){
             self.phonenumberLabel.text = hospital.phones[0];
-        }else{
+        }else {
             self.phonenumberLabel.text = @"-";
         }
         self.hospitalAddressLabel.text =hospital.street;

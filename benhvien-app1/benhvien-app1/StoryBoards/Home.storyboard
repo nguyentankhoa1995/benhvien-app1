@@ -80,7 +80,7 @@
                             <constraint firstAttribute="trailing" secondItem="AdC-Pn-30U" secondAttribute="trailing" id="yuy-6V-W0m"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="advanceSearchButton" destination="N5m-rn-wLi" id="D9Q-z7-ykF"/>
                         <outlet property="searchButton" destination="Wgs-lQ-2I5" id="LHe-e8-F2v"/>
@@ -187,7 +187,7 @@
                             <constraint firstItem="P1Q-qW-EcZ" firstAttribute="leading" secondItem="u2y-lj-VTx" secondAttribute="leading" constant="20" id="jaZ-VZ-oel"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="cityContentView" destination="byj-8O-TBR" id="f1t-d0-sMu"/>
                         <outlet property="cityPicker" destination="yck-sk-Mml" id="P0D-5D-GI4"/>
@@ -297,7 +297,7 @@
                             <constraint firstItem="EPy-af-Duf" firstAttribute="leading" secondItem="LYO-vN-tZ0" secondAttribute="leading" id="slB-xc-OOC"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="resultTableView" destination="EPy-af-Duf" id="aHB-CZ-BPI"/>
                     </connections>
@@ -354,7 +354,7 @@
                             <constraint firstItem="Mz7-cM-8LB" firstAttribute="leading" secondItem="PQM-il-eMk" secondAttribute="leading" id="tiZ-pd-RTO"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="contentView" destination="835-5D-1qF" id="L8w-RW-Q5g"/>
                     </connections>
@@ -389,7 +389,7 @@
                             <constraint firstItem="gAd-sb-lLA" firstAttribute="top" secondItem="qQ3-Eu-G4t" secondAttribute="top" id="nb3-dk-iCQ"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="mapView" destination="gAd-sb-lLA" id="5tc-tZ-6w2"/>
                     </connections>
@@ -412,14 +412,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-mn-yfh">
                                 <rect key="frame" x="20" y="40" width="335" height="351"/>
-                                <mutableString key="text">Ứng dụng bệnh viện cho điện thoai iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chỗ khám chữa bệnh.Ứng dụng bệnh viện cho điện thoai iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chỗ khám chữa bệnh.
+                                <string key="text">Ứng dụng bệnh viện cho điện thoai iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chỗ khám chữa bệnh.Ứng dụng bệnh viện cho điện thoai iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chỗ khám chữa bệnh.
 
-1) Bao gồm nhiều bệnh viện và phòng kaám tại Việt Nam.
+1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam.
 2) Chức năng tìm kiếm bệnh viện dễ sử dụng và hiệu quả cao.
-3) Hiển thị thing tin chi tiết của cơ sở khám chữa banh.
-4) Hiển thị đường đi một cách rõ ràng, giúp bạn đến cáo cơ sở khám bệnh một cách nhanh nhất.
-5) Dữ liệu được cập nhật thuường xuyên, bạn cũng có thể đóng góp bằng cách thêm vào cáo bệnh viện mới.
-</mutableString>
+3) Hiển thị thông tin chi tiết của cơ sở khám chữa bệnh.
+4) Hiển thị đường đi một cách rõ ràng, giúp bạn đến các cơ sở khám bệnh một cách nhanh nhất.
+5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thể đóng góp bằng cách thêm vào cáo bệnh viện mới.
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.25098039215686274" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -432,7 +432,7 @@
                             <constraint firstItem="3gh-mn-yfh" firstAttribute="leading" secondItem="DDA-f0-Ykq" secondAttribute="leading" constant="20" id="wex-R2-Bzz"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="td4-Ce-IvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

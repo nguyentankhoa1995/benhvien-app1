@@ -23,6 +23,11 @@
     [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
 }
 
+- (void)setMenuItems:(NSArray *)menuItems {
+    _menuItems = menuItems;
+    [_menuTableView reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.menuItems.count;
 }
@@ -32,7 +37,19 @@
     if (!cell) {
         cell = [[MenuViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuViewCell"];
     }
+    NSDictionary *dic = _menuItems[indexPath.row];
+    NSString *imgName = [dic objectForKey:@"icon"];
+    NSString *title = [dic objectForKey: @"title"];
+    cell.iconImage.image = [UIImage imageNamed:imgName];
+    cell.titleLabel.text = title;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:false];
+    if (self.onDidSelectItemAtIndex){
+        self.onDidSelectItemAtIndex(indexPath.row);
+    }
 }
 
 @end

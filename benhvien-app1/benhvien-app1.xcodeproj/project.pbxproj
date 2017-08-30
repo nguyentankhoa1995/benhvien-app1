@@ -352,7 +352,6 @@
 				EE472E011F41D46F00700401 /* Resource */,
 				EEE692C51F54369200272AFD /* Views */,
 				EE31932B1F3497380093E94C /* Api */,
-				EE461DE01F2B60F100124E67 /* App */,
 				EE461DF11F2B611600124E67 /* Libraries */,
 				EE3C1EF71F31F58500F93EDB /* StoryBoards */,
 				EE3C1F511F31F63800F93EDB /* Models */,
@@ -361,6 +360,7 @@
 				EE461DD71F2B600F00124E67 /* LaunchScreen.storyboard */,
 				EE461DDA1F2B600F00124E67 /* Info.plist */,
 				EE461DC91F2B600F00124E67 /* Supporting Files */,
+				EE461DE01F2B60F100124E67 /* App */,
 			);
 			path = "benhvien-app1";
 			sourceTree = "<group>";

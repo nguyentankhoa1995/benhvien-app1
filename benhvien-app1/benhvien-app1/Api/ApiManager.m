@@ -119,7 +119,7 @@
 
 #pragma mark - FAILURE
 
-- (void)processFailureWithError:(NSError *)error completion:(ApiCompletionBlock)completion{
+- (void)processFailureWithError:(NSError *)error completion:(ApiCompletionBlock)completion {
     if(completion) {
           completion(nil, error);
       }

@@ -25,9 +25,9 @@
     }
     
     NSArray *districtArray = [data objectForKey:@"districtes"];
-    if (districtArray.count > 0){
+    if (districtArray.count > 0) {
         self.district = [NSMutableArray new];
-        for (NSDictionary *districtData in districtArray){
+        for (NSDictionary *districtData in districtArray) {
             NSString *districName = [districtData objectForKey:@"name"];
             [self.district addObject:[districName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
         }
