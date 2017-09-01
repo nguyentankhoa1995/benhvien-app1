@@ -25,25 +25,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
                                 <color key="backgroundColor" red="0.8913037628449243" green="0.74379761424557911" blue="0.5802372832750452" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="159.5" id="bYK-We-pef"/>
+                                    <constraint firstAttribute="height" constant="159.5" id="NP2-tA-5h5"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="42c-85-Rrr" secondAttribute="trailing" id="50b-i2-PJg"/>
-                            <constraint firstItem="42c-85-Rrr" firstAttribute="top" secondItem="1Ls-20-GxC" secondAttribute="top" id="F2u-Bk-4KB"/>
-                            <constraint firstAttribute="bottom" secondItem="42c-85-Rrr" secondAttribute="bottom" constant="30" id="Ia5-gl-cS2"/>
-                            <constraint firstItem="42c-85-Rrr" firstAttribute="leading" secondItem="1Ls-20-GxC" secondAttribute="leading" id="JgO-It-9eu"/>
-                            <constraint firstAttribute="height" constant="189.5" id="smc-W4-cQV"/>
+                            <constraint firstItem="42c-85-Rrr" firstAttribute="leading" secondItem="1Ls-20-GxC" secondAttribute="leading" id="14m-dd-a95"/>
+                            <constraint firstAttribute="bottom" secondItem="42c-85-Rrr" secondAttribute="bottom" constant="30" id="Agi-l3-mev"/>
+                            <constraint firstAttribute="height" constant="189.5" id="IrH-0g-O0H"/>
+                            <constraint firstItem="42c-85-Rrr" firstAttribute="top" secondItem="1Ls-20-GxC" secondAttribute="top" id="TAx-0L-W4s"/>
+                            <constraint firstAttribute="trailing" secondItem="42c-85-Rrr" secondAttribute="trailing" id="ufe-mK-hBy"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1Ls-20-GxC" firstAttribute="top" secondItem="xWW-WZ-0tj" secondAttribute="top" id="Kxa-le-uly"/>
-                    <constraint firstItem="1Ls-20-GxC" firstAttribute="leading" secondItem="xWW-WZ-0tj" secondAttribute="leading" id="TI0-Ph-2Yu"/>
-                    <constraint firstAttribute="trailing" secondItem="1Ls-20-GxC" secondAttribute="trailing" id="a9X-6Z-359"/>
-                    <constraint firstAttribute="bottom" secondItem="1Ls-20-GxC" secondAttribute="bottom" id="c3R-Te-P8f"/>
+                    <constraint firstItem="1Ls-20-GxC" firstAttribute="top" secondItem="xWW-WZ-0tj" secondAttribute="top" id="DXo-2v-Bxl"/>
+                    <constraint firstAttribute="trailing" secondItem="1Ls-20-GxC" secondAttribute="trailing" id="Fm2-Y0-2PK"/>
+                    <constraint firstItem="1Ls-20-GxC" firstAttribute="leading" secondItem="xWW-WZ-0tj" secondAttribute="leading" id="bhJ-W8-k0S"/>
+                    <constraint firstAttribute="bottom" secondItem="1Ls-20-GxC" secondAttribute="bottom" constant="-0.5" id="j1E-S5-bJN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

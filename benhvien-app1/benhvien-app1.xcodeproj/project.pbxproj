@@ -359,8 +359,8 @@
 				EE461DD51F2B600F00124E67 /* Assets.xcassets */,
 				EE461DD71F2B600F00124E67 /* LaunchScreen.storyboard */,
 				EE461DDA1F2B600F00124E67 /* Info.plist */,
-				EE461DC91F2B600F00124E67 /* Supporting Files */,
 				EE461DE01F2B60F100124E67 /* App */,
+				EE461DC91F2B600F00124E67 /* Supporting Files */,
 			);
 			path = "benhvien-app1";
 			sourceTree = "<group>";

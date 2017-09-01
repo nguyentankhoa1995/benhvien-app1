@@ -21,34 +21,35 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information-icon" translatesAutoresizingMaskIntoConstraints="NO" id="7bY-jj-1Gb">
                         <rect key="frame" x="5" y="5" width="15" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="X8S-cA-fJV"/>
+                            <constraint firstAttribute="width" constant="15" id="ZGy-Mm-Z4E"/>
+                            <constraint firstAttribute="height" constant="15" id="hP7-01-HAC"/>
                         </constraints>
                     </imageView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B5S-k3-DBI">
-                        <rect key="frame" x="30" y="5" width="340" height="84.5"/>
+                        <rect key="frame" x="30" y="1" width="340" height="88.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="84.5" id="Qr0-7z-KaE"/>
+                            <constraint firstAttribute="height" constant="88.5" id="TyN-cg-D0x"/>
                         </constraints>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.50588235294117645" green="0.51372549019607838" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="B5S-k3-DBI" firstAttribute="leading" secondItem="7bY-jj-1Gb" secondAttribute="trailing" constant="10" id="DKJ-hI-MTc"/>
-                    <constraint firstItem="7bY-jj-1Gb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Fuo-Bf-9md"/>
-                    <constraint firstItem="B5S-k3-DBI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Yns-oa-0Cu"/>
-                    <constraint firstAttribute="bottom" secondItem="B5S-k3-DBI" secondAttribute="bottom" constant="5" id="g6L-so-feS"/>
-                    <constraint firstItem="7bY-jj-1Gb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="lZT-P5-9Mn"/>
-                    <constraint firstAttribute="trailing" secondItem="B5S-k3-DBI" secondAttribute="trailing" constant="5" id="tOd-oK-S3g"/>
+                    <constraint firstItem="7bY-jj-1Gb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="3DH-Iw-K7q"/>
+                    <constraint firstItem="B5S-k3-DBI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="6Hj-MT-BNF"/>
+                    <constraint firstItem="B5S-k3-DBI" firstAttribute="leading" secondItem="7bY-jj-1Gb" secondAttribute="trailing" constant="10" id="PQw-ed-HJR"/>
+                    <constraint firstItem="7bY-jj-1Gb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="d2m-5Z-myM"/>
+                    <constraint firstAttribute="trailing" secondItem="B5S-k3-DBI" secondAttribute="trailing" constant="5" id="d3M-40-gtb"/>
+                    <constraint firstAttribute="bottom" secondItem="B5S-k3-DBI" secondAttribute="bottom" constant="5" id="gmJ-qL-BIt"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="ThumImageTableViewCell"/>
             <connections>
                 <outlet property="hospitalLocationTextView" destination="B5S-k3-DBI" id="Mny-UD-lvS"/>
             </connections>
-            <point key="canvasLocation" x="-282.5" y="-520"/>
+            <point key="canvasLocation" x="-456" y="-513"/>
         </tableViewCell>
     </objects>
     <resources>

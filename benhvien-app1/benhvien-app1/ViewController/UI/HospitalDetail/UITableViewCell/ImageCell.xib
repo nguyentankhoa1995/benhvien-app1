@@ -21,21 +21,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-la-S1U" customClass="KASlideShow">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="5xY-ol-V7Q"/>
+                            <constraint firstAttribute="height" constant="300" id="yNQ-wE-N7d"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uuy-la-S1U" firstAttribute="leading" secondItem="IXN-sC-ObB" secondAttribute="leading" id="FrV-ip-WcS"/>
-                    <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="G3s-VO-34g"/>
-                    <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="Zu4-rT-5w7"/>
-                    <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="aOO-eC-jVj"/>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="ArR-ux-4NB"/>
+                    <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="EsV-kj-X1P"/>
+                    <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="dDO-Rw-I5d"/>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="leading" secondItem="IXN-sC-ObB" secondAttribute="leading" id="iVX-js-YNG"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="slideShow" destination="uuy-la-S1U" id="RtO-wp-L4H"/>
             </connections>
-            <point key="canvasLocation" x="-563" y="-129"/>
+            <point key="canvasLocation" x="-563.5" y="-129"/>
         </tableViewCell>
     </objects>
 </document>
