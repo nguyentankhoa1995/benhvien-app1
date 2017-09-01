@@ -67,18 +67,17 @@
                 OCDirectionsRoute *route = [response route];
                 OCDirectionsPolyline *overViewPolyline = route.overviewPolyline;
                 NSString *point = overViewPolyline.points;
-                GMSPath *path = [GMSPath pathFromEncodedPath:point];
-                polyline = [GMSPolyline polylineWithPath:path];
-            }
-            if (polyline) {
-//                polyline.map = self.mapView;
-//                polyline.strokeColor =  [UIColor blackColor];
+               
                 GMSMarker *marker = [GMSMarker new];
                 marker.position = CLLocationCoordinate2DMake(currentLocation.latitude, currentLocation.longitude);
                 marker.appearAnimation = kGMSMarkerAnimationPop;
                 marker.icon = [UIImage imageNamed:@"flag_icon"];
-                marker.map = _mapView;
-                polyline.map = self.mapView;
+                marker.map = self.mapView;
+                GMSPath *path = [GMSPath pathFromEncodedPath:point];
+                polyline = [GMSPolyline polylineWithPath:path];
+            }
+            if (polyline) {
+                polyline.map = _mapView;
             }
         });
     }];

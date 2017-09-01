@@ -23,7 +23,7 @@
 - (void)configureCell:(id)model {
     ThumbImageModels *hospital = (ThumbImageModels *)model;
     if (hospital) {
-        self.hospitalLocationTextView.text = hospital.hospitalDescipton ;
+        self.hospitalDesciptionLabel.text = hospital.hospitalDescipton ;
     }
 }
 

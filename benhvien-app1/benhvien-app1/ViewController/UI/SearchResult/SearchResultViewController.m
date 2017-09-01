@@ -12,9 +12,12 @@
 #import "Hospital.h"
 #import "HospitalTableViewCell.h"
 #import "HomeViewController.h"
+#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 
 @interface SearchResultViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 
 @end
 
