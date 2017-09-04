@@ -7,7 +7,7 @@
 //
 
 #import "DirectionViewController.h"
-#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
+
 
 @interface DirectionViewController ()<CLLocationManagerDelegate>
 {
@@ -77,6 +77,12 @@
                 polyline = [GMSPolyline polylineWithPath:path];
             }
             if (polyline) {
+                
+                GMSMarker *marker2 = [GMSMarker new];
+                marker2.position = CLLocationCoordinate2DMake(_hospital.latitude, _hospital.longtitude);
+                [marker2 setAppearAnimation:kGMSMarkerAnimationPop];
+                marker2.icon = [UIImage imageNamed:@"flag_icon"];
+                marker2.map = _mapView;
                 polyline.map = _mapView;
             }
         });

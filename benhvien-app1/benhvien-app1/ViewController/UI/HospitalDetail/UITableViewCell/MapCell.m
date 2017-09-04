@@ -27,13 +27,12 @@
         
         GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
         
-//        GMSMarker *marker = [[GMSMarker alloc] init];
-//        marker.position = camera.target;
-//        marker.snippet = @"Hello World";
-//        marker.appearAnimation = kGMSMarkerAnimationPop;
-//        marker.map = mapView;
-        
-        self.MapView = mapView;
+        GMSMarker *marker = [GMSMarker new];
+        marker.position = CLLocationCoordinate2DMake(hos.latitude, hos.longtitude);
+        [marker setAppearAnimation:kGMSMarkerAnimationPop];
+        marker.icon = [UIImage imageNamed:@"flag_icon"];
+        marker.map = mapView;
+       self.MapView = mapView;
     }
 }
 @end
