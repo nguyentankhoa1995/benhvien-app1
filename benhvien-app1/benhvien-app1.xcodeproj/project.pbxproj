@@ -60,6 +60,8 @@
 		EEE692CE1F54399500272AFD /* MenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE692CC1F54399500272AFD /* MenuViewCell.m */; };
 		EEE692CF1F54399500272AFD /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE692CD1F54399500272AFD /* MenuViewCell.xib */; };
 		EEE692D31F543E1E00272AFD /* AppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE692D21F543E1E00272AFD /* AppInfoViewController.m */; };
+		EEFBE6651F60254000712381 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFBE6641F60254000712381 /* FirstLoginViewController.m */; };
+		EEFBE6691F6027EE00712381 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFBE6681F6027EE00712381 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +161,10 @@
 		EEE692CD1F54399500272AFD /* MenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
 		EEE692D11F543E1E00272AFD /* AppInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewController.h; sourceTree = "<group>"; };
 		EEE692D21F543E1E00272AFD /* AppInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewController.m; sourceTree = "<group>"; };
+		EEFBE6631F60254000712381 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
+		EEFBE6641F60254000712381 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
+		EEFBE6671F6027EE00712381 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EEFBE6681F6027EE00712381 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F33F508D9455E5C9E0F68DB1 /* Pods-benhvien-app1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app1/Pods-benhvien-app1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +252,8 @@
 				EE8E59D01F47109B00C3DBEC /* Addvance */,
 				EE3C1F2A1F31F62400F93EDB /* Home */,
 				EE3C1F2D1F31F62400F93EDB /* HospitalDetail */,
+				EEFBE6661F6027D300712381 /* Login */,
+				EEFBE6621F60251700712381 /* FirstLogin */,
 				EE3C1F3F1F31F62400F93EDB /* SearchResult */,
 			);
 			path = UI;
@@ -487,6 +495,25 @@
 			path = AppInfo;
 			sourceTree = "<group>";
 		};
+		EEFBE6621F60251700712381 /* FirstLogin */ = {
+			isa = PBXGroup;
+			children = (
+				EEFBE6631F60254000712381 /* FirstLoginViewController.h */,
+				EEFBE6641F60254000712381 /* FirstLoginViewController.m */,
+			);
+			name = FirstLogin;
+			path = SearchResult/FirstLogin;
+			sourceTree = "<group>";
+		};
+		EEFBE6661F6027D300712381 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EEFBE6671F6027EE00712381 /* LoginViewController.h */,
+				EEFBE6681F6027EE00712381 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -637,6 +664,7 @@
 				EEE692D31F543E1E00272AFD /* AppInfoViewController.m in Sources */,
 				EE3C1F471F31F62400F93EDB /* AddressCell.m in Sources */,
 				EE461DFE1F2B611600124E67 /* UIAlertController+Blocks.m in Sources */,
+				EEFBE6691F6027EE00712381 /* LoginViewController.m in Sources */,
 				EE3C1F501F31F62400F93EDB /* SearchResultViewController.m in Sources */,
 				EE8E59D71F471D3B00C3DBEC /* HospitalTableViewCell.m in Sources */,
 				EEAF4D281F4AFB5200E106B3 /* MapCell.m in Sources */,
@@ -655,6 +683,7 @@
 				EECF268C1F2F6B1C000A42BB /* HLTableViewSection.m in Sources */,
 				EE31932F1F34994F0093E94C /* ApiManager.m in Sources */,
 				EE461DFF1F2B611600124E67 /* UIColor+Hex.m in Sources */,
+				EEFBE6651F60254000712381 /* FirstLoginViewController.m in Sources */,
 				EE3C1F4E1F31F62400F93EDB /* ThumImageTableViewCell.m in Sources */,
 				EE8E59D31F47109B00C3DBEC /* AdvanceViewController.m in Sources */,
 			);

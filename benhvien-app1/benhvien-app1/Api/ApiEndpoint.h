@@ -17,5 +17,7 @@
 #define SearchHospitalCity                  @"hospitals-city"
 #define HospitalInfo                        @"hospitalInfo"
 #define GoogleApiKey                        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
+#define Login                               @"authenticate"
+#define Register                            @"register"
 
 #endif /* ApiEndpoint_h */

@@ -14,6 +14,7 @@
 #import "HomeViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "ApiEndpoint.h"
+#import "FirstLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,8 +24,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self setupFirstLoginScreen];
     [self setupApplicationTheme];
-    [self setupHomeScreen1];
     [self setupApplicationData];
     return YES;
 }
@@ -32,6 +33,13 @@
 - (void)setupApplicationData {
     [GMSServices provideAPIKey:GoogleApiKey];
     [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
+}
+
+- (void)setupFirstLoginScreen {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    FirstLoginViewController *vc = (FirstLoginViewController *)[FirstLoginViewController instanceFromStoryboardName:@"Home"];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)setupHomeScreen {

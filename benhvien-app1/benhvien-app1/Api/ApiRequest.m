@@ -48,5 +48,13 @@
     [[ApiManager shareClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:paramenters completion:completion];
 }
 
++ (void)registerUser:(NSString *)email password:(NSString *)passaword city:(NSString *)city fullname:(NSString *)fullname completionBlock:(ApiCompletionBlock)completion {
+    NSDictionary *paramenters = @{@"email":email,
+                                  @"password":passaword,
+                                  @"role":@"email",
+                                  @"city":city,
+                                  @"fullName":fullname};
+    [[ApiManager shareClient] requestApiWithEndpoint:Register method:POST parameters:paramenters completion:completion];
+}
 
 @end
