@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "ApiRequest.h"
+#import "AppDelegate.h"
 
 @interface HomeViewController :BaseViewController
 

@@ -15,6 +15,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "ApiEndpoint.h"
 #import "FirstLoginViewController.h"
+#import "BaseTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupFirstLoginScreen];
+//    [self setupHomeScreen1];
     [self setupApplicationTheme];
     [self setupApplicationData];
     return YES;

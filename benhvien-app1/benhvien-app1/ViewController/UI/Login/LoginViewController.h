@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+typedef enum {
+    LOGIN,
+    REGISTERS
+}LoginViewState;
 
 @interface LoginViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIView *loginContentView;
+@property (weak, nonatomic) IBOutlet UIView *registerContentView;
+
+- (IBAction)loginSegment:(id)sender;
+
+
 
 @end
