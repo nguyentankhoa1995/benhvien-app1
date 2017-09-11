@@ -8,7 +8,9 @@
 
 #import "LoginViewController.h"
 #import "BaseNavigationController.h"
-#import "BaseTabBarController.h"
+#import "AppDelegate.h"
+#import "PlacesViewController.h"
+
 
 @interface LoginViewController ()
 {
@@ -38,34 +40,107 @@
 
 - (void)showLogin {
     self.title = @"Đăng nhập";
-    _registerContentView.hidden = true;
-    _loginContentView.hidden = false;
+    _registerContentView.hidden = false;
+    _loginContentView.hidden = true;
     _loginState = LOGIN;
 }
 
 - (void)showRegister {
     self.title = @"Đăng kí";
-    _loginContentView.hidden = true;
-    _registerContentView.hidden = false;
+    _loginContentView.hidden = false;
+    _registerContentView.hidden = true;
     _loginState = REGISTERS;
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
+    [self.view endEditing:true];
+    if (_loginState == REGISTERS) {
+        [self registerUser];
+    }else {
+        [self loginUser];
+    }
+}
+
+- (void)registerUser {
    
 }
 
-- (IBAction)cancelButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+- (void)loginUser {
+    NSString *email = self.loginUserTextField.text;
+    NSString *password = self.loginPasswordUserTextField.text;
+    [self validateEmail:email password:password completion:^(NSString *message, BOOL isValid) {
+        if (isValid) {
+            [self loginWithEmail:email password:password];
+        }else {
+            [self showMessage:@"Lỗi" message:message];
+        }
+    }];
+}
+
+- (void)loginWithEmail:(NSString *)email password:(NSString *)password {
+    [self showHUD];
+    [ApiRequest loginWithEmail:email password:password completionBlock:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
+        if (error || !response.success) {
+            [self showMessage:@"Lỗi" message:response.message];
+        }else {
+            AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [app setupHomeScreen1];
+        }
+    }];
 }
 
 
-- (IBAction)loginSegment:(id)sender {
-    if (_loginState == REGISTERS) {
+- (void)validateEmail:(NSString *)email password:(NSString *)password completion:(void(^)(NSString *message, BOOL isValid))block {
+    if (!email || email.length == 0) {
+        block(@"Bạn vui lòng nhập email", false);
+        return;
+    }
+    
+    if (!password || password.length == 0) {
+        block(@"Bạn vui lòng nhập mật khẩu", false);
+        return;
+    }
+    
+    block(@"", true);
+}
+
+
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self.view endEditing:true];
+    [UIAlertController showAlertInViewController:self
+                                       withTitle:@"Xác nhận"
+                                         message:@"Bạn có chắc chắn muốn huỷ bỏ?"
+                               cancelButtonTitle:@"Cancel"
+                          destructiveButtonTitle:@"Yes"
+                               otherButtonTitles:nil
+                                        tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
+                                            if (buttonIndex == controller.cancelButtonIndex) {
+                                                
+                                            } else if (buttonIndex == controller.destructiveButtonIndex) {
+                                                [self.navigationController dismissViewControllerAnimated:true completion:nil];
+                                            } else if (buttonIndex >= controller.firstOtherButtonIndex) {
+                                                
+                                            }
+                                        }];
+
+}
+
+
+- (IBAction)loginSegment:(UISegmentedControl *)sender {
+    NSInteger selectedSegment = sender.selectedSegmentIndex;
+    if (selectedSegment == 0) {
         [self showRegister];
     }else {
         [self showLogin];
     }
     
+}
+
+- (IBAction)cityButtonPressed:(id)sender {
+    PlacesViewController *vc = (PlacesViewController *)[PlacesViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *nav =  [[BaseNavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:true completion:nil];
 }
 
 @end

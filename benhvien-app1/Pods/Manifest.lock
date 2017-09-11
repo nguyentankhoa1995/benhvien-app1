@@ -19,11 +19,17 @@ PODS:
   - GoogleMaps/Base (2.2.0)
   - GoogleMaps/Maps (2.2.0):
     - GoogleMaps/Base
+  - HNKGooglePlacesAutocomplete (1.2.0):
+    - AFNetworking (~> 3.0)
+    - Mantle (~> 2.0)
   - IQDropDownTextField (1.1.0)
   - IQKeyboardManager (4.0.8)
   - IQKeyboardManagerSwift (4.0.8)
   - KASlideShow (3.0.0):
     - SDWebImage (~> 3.8)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - MBProgressHUD (1.0.0)
   - OCGoogleDirectionsAPI (0.1.7)
   - PureLayout (3.0.2)
@@ -34,27 +40,30 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - GoogleMaps
+  - HNKGooglePlacesAutocomplete
   - IQDropDownTextField (~> 1.1)
   - IQKeyboardManager
   - IQKeyboardManagerSwift (~> 4.0)
   - KASlideShow (~> 3.0)
   - MBProgressHUD (~> 1.0.0)
-  - OCGoogleDirectionsAPI (~> 0.1.7)
+  - OCGoogleDirectionsAPI
   - PureLayout (~> 3.0)
   - SDWebImage (= 3.8.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  HNKGooglePlacesAutocomplete: 1977cf89b41080aba06ff0e934eb72c01efb8e03
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
   KASlideShow: d737c734ee603ed4fc7de09876d5193192e74ee4
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OCGoogleDirectionsAPI: 03c35fbedfe01506b6270a94259969bc60d6f7ce
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 80af24fd554e2b71119df882b35f19ab61b67cdf
+PODFILE CHECKSUM: 722858eebef4479800bbaf4cbd2bddc103e56c47
 
 COCOAPODS: 1.2.1

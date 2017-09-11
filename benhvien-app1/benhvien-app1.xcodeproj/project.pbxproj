@@ -52,6 +52,8 @@
 		EEAF4D371F4AFCB900E106B3 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAF4D361F4AFCB900E106B3 /* ImageModel.m */; };
 		EEAF4D3A1F4AFCC800E106B3 /* AddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAF4D391F4AFCC800E106B3 /* AddressModel.m */; };
 		EEAF4D3D1F4AFCD100E106B3 /* MapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAF4D3C1F4AFCD100E106B3 /* MapModel.m */; };
+		EEB7A8A11F66AC9B00CD848A /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB7A8A01F66AC9B00CD848A /* PlacesViewController.m */; };
+		EEB7A8A41F66AD6500CD848A /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB7A8A31F66AD6500CD848A /* PlacesTableViewCell.m */; };
 		EECF268A1F2F6B1C000A42BB /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF26851F2F6B1C000A42BB /* HLTableView.m */; };
 		EECF268B1F2F6B1C000A42BB /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF26871F2F6B1C000A42BB /* HLTableViewCell.m */; };
 		EECF268C1F2F6B1C000A42BB /* HLTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF26891F2F6B1C000A42BB /* HLTableViewSection.m */; };
@@ -147,6 +149,10 @@
 		EEAF4D391F4AFCC800E106B3 /* AddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressModel.m; sourceTree = "<group>"; };
 		EEAF4D3B1F4AFCD100E106B3 /* MapModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapModel.h; sourceTree = "<group>"; };
 		EEAF4D3C1F4AFCD100E106B3 /* MapModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapModel.m; sourceTree = "<group>"; };
+		EEB7A89F1F66AC9B00CD848A /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesViewController.h; sourceTree = "<group>"; };
+		EEB7A8A01F66AC9B00CD848A /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
+		EEB7A8A21F66AD6500CD848A /* PlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
+		EEB7A8A31F66AD6500CD848A /* PlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
 		EECF26841F2F6B1C000A42BB /* HLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableView.h; sourceTree = "<group>"; };
 		EECF26851F2F6B1C000A42BB /* HLTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableView.m; sourceTree = "<group>"; };
 		EECF26861F2F6B1C000A42BB /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 				EE8E59D01F47109B00C3DBEC /* Addvance */,
 				EE3C1F2A1F31F62400F93EDB /* Home */,
 				EE3C1F2D1F31F62400F93EDB /* HospitalDetail */,
+				EEB7A89E1F66AC7900CD848A /* Places */,
 				EEFBE6661F6027D300712381 /* Login */,
 				EEFBE6621F60251700712381 /* FirstLogin */,
 				EE3C1F3F1F31F62400F93EDB /* SearchResult */,
@@ -460,6 +467,17 @@
 			path = Direction;
 			sourceTree = "<group>";
 		};
+		EEB7A89E1F66AC7900CD848A /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				EEB7A89F1F66AC9B00CD848A /* PlacesViewController.h */,
+				EEB7A8A01F66AC9B00CD848A /* PlacesViewController.m */,
+				EEB7A8A21F66AD6500CD848A /* PlacesTableViewCell.h */,
+				EEB7A8A31F66AD6500CD848A /* PlacesTableViewCell.m */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
 		EECF26831F2F6B1C000A42BB /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +672,7 @@
 				EEE692C81F5436BF00272AFD /* MenuView.m in Sources */,
 				EE3C1F431F31F62400F93EDB /* BaseTabBarController.m in Sources */,
 				EE3C1F491F31F62400F93EDB /* HospitalNameCell.m in Sources */,
+				EEB7A8A41F66AD6500CD848A /* PlacesTableViewCell.m in Sources */,
 				EECF268B1F2F6B1C000A42BB /* HLTableViewCell.m in Sources */,
 				EE3C1F421F31F62400F93EDB /* BaseNavigationController.m in Sources */,
 				EE3C1F541F31F63800F93EDB /* Hospital.m in Sources */,
@@ -663,6 +682,7 @@
 				EE3193381F34999E0093E94C /* ApiResponse.m in Sources */,
 				EEE692D31F543E1E00272AFD /* AppInfoViewController.m in Sources */,
 				EE3C1F471F31F62400F93EDB /* AddressCell.m in Sources */,
+				EEB7A8A11F66AC9B00CD848A /* PlacesViewController.m in Sources */,
 				EE461DFE1F2B611600124E67 /* UIAlertController+Blocks.m in Sources */,
 				EEFBE6691F6027EE00712381 /* LoginViewController.m in Sources */,
 				EE3C1F501F31F62400F93EDB /* SearchResultViewController.m in Sources */,

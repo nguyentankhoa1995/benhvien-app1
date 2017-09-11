@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+
+
 typedef enum {
     LOGIN,
     REGISTERS
@@ -16,8 +18,15 @@ typedef enum {
 @interface LoginViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UIView *loginContentView;
 @property (weak, nonatomic) IBOutlet UIView *registerContentView;
+@property (weak, nonatomic) IBOutlet UITextField *loginUserTextField;
+@property (weak, nonatomic) IBOutlet UITextField *loginPasswordUserTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameUserTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailUserTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passUserTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cityTextField;
 
-- (IBAction)loginSegment:(id)sender;
+
+- (IBAction)loginSegment:(UISegmentedControl *)sender;
 
 
 

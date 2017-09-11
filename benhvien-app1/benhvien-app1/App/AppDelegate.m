@@ -16,6 +16,7 @@
 #import "ApiEndpoint.h"
 #import "FirstLoginViewController.h"
 #import "BaseTabBarController.h"
+#import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocompleteQuery.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +30,7 @@
 //    [self setupHomeScreen1];
     [self setupApplicationTheme];
     [self setupApplicationData];
+    [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
     return YES;
 }
 

@@ -1,18 +1,18 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'benhvien-app1' do
-
   use_frameworks!
-pod 'PureLayout', '~> 3.0'
-pod 'MBProgressHUD', '~> 1.0.0'
-pod 'IQKeyboardManagerSwift', '~> 4.0'
-pod 'IQDropDownTextField', '~> 1.1'
-pod 'KASlideShow', '~> 3.0'
-pod 'AFNetworking', '~> 3.0'
-pod 'SDWebImage', '3.8.2'
-pod 'IQKeyboardManager'
-pod 'GoogleMaps'
-pod 'OCGoogleDirectionsAPI", "~> 0.1.7'
-
+  
+  pod 'PureLayout', '~> 3.0'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'IQKeyboardManagerSwift', '~> 4.0'
+  pod 'IQDropDownTextField', '~> 1.1'
+  pod 'KASlideShow', '~> 3.0'
+  pod 'AFNetworking', '~> 3.0'
+  pod 'SDWebImage', '3.8.2'
+  pod 'IQKeyboardManager'
+  pod 'GoogleMaps'
+  pod 'OCGoogleDirectionsAPI'
+  pod 'HNKGooglePlacesAutocomplete'
 end

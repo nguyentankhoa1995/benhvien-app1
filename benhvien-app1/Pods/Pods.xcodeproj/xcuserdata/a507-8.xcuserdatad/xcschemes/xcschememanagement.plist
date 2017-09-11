@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HNKGooglePlacesAutocomplete.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQDropDownTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +35,11 @@
 			<false/>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,16 +72,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2CFBE04C4DB3E0AFB9C86CEA6B4065C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3D588DED3520843A6FE7E69E583C1DED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
@@ -87,7 +87,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>88FE151DB86558D26EB5C33548EFFD83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>93A67353D6C775CCEC153F92551399D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9535E44EC917357D251A5089D54601B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2210439C6FDF324C6C8C80DC225BD3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9815C4EA2C8419B4BB312FEAC28E290</key>
 		<dict>
 			<key>primary</key>
 			<true/>
