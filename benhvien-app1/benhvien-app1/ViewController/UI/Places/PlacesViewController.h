@@ -11,6 +11,6 @@
 
 @interface PlacesViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *placesTableView;
-
+@property (nonatomic)void (^onDidSelect)(NSString *city , UIViewController *vc);
 
 @end

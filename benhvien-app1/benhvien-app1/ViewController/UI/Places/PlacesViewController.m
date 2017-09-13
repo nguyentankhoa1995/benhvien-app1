@@ -106,5 +106,11 @@
     return cell;;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.onDidSelect) {
+        HNKGooglePlacesAutocompletePlace *data = searchResult[indexPath.row];
+        self.onDidSelect(data.name , self);
+    }
+}
 
 @end

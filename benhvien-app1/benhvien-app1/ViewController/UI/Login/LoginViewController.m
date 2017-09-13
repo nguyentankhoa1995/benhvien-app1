@@ -36,6 +36,7 @@
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Huỷ bỏ" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed:)];
     self.navigationItem.leftBarButtonItem = cancelButton;
+    [self showRegister];
 }
 
 - (void)showLogin {
@@ -54,15 +55,26 @@
 
 - (IBAction)doneButtonPressed:(id)sender {
     [self.view endEditing:true];
+    if (_loginState == LOGIN) {
+        [self loginUser];
+    }
     if (_loginState == REGISTERS) {
         [self registerUser];
-    }else {
-        [self loginUser];
     }
 }
 
 - (void)registerUser {
-   
+    NSString *name = self.nameUserTextField.text;
+    NSString *email = self.emailUserTextField.text;
+    NSString *pass = self.passUserTextField.text;
+    NSString *city = self.cityTextField.text;
+    [self registerUserName:name email:email password:pass city:city completion:^(NSString *message, BOOL isValid) {
+        if (isValid) {
+            [self registerUserWithName:name email:email password:pass city:city];
+        }else {
+            [self showMessage:@"Lỗi" message:message];
+        }
+    }];
 }
 
 - (void)loginUser {
@@ -90,6 +102,21 @@
     }];
 }
 
+- (void)registerUserWithName:(NSString *)name email:(NSString *)email password:(NSString *)password city:(NSString *)city{
+    [self showHUD];
+    [ApiRequest registerUser:email password:password city:city fullname:name completionBlock:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
+        if (error || !response.success) {
+            [self showMessage:@"Lỗi" message:response.message];
+        }else {
+            
+                AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                [app setupHomeScreen1];
+            
+        }
+    }];
+
+}
 
 - (void)validateEmail:(NSString *)email password:(NSString *)password completion:(void(^)(NSString *message, BOOL isValid))block {
     if (!email || email.length == 0) {
@@ -105,6 +132,30 @@
     block(@"", true);
 }
 
+- (void)registerUserName:(NSString *)name email:(NSString *)email password:(NSString *)password city:(NSString *)city completion:(void(^)(NSString *message, BOOL isValid))block {
+    
+    if (!name || name.length == 0) {
+        block(@"Bạn vui lòng nhập đầy đủ họ tên",false);
+        return;
+    }
+    
+    if (!email || email.length == 0) {
+        block(@"Bạn vui lòng nhập email", false);
+        return;
+    }
+    
+    if (!password || password.length == 0) {
+        block(@"Bạn vui lòng nhập mật khẩu", false);
+        return;
+    }
+    
+    if(!city || city.length == 0) {
+        block(@"Bạn vui lòng nhập Tỉnh/Thành phố",false);
+        return;
+    }
+    
+    block(@"", true);
+}
 
 - (IBAction)cancelButtonPressed:(id)sender {
     [self.view endEditing:true];
@@ -139,6 +190,11 @@
 
 - (IBAction)cityButtonPressed:(id)sender {
     PlacesViewController *vc = (PlacesViewController *)[PlacesViewController instanceFromStoryboardName:@"Home"];
+    [vc setOnDidSelect:^(NSString *city , UIViewController *vc) {
+        NSLog(@"%@",city);
+        self.cityTextField.text = city;
+        [vc dismissViewControllerAnimated:true completion:nil];
+    }];
     BaseNavigationController *nav =  [[BaseNavigationController alloc]initWithRootViewController:vc];
     [self presentViewController:nav animated:true completion:nil];
 }
