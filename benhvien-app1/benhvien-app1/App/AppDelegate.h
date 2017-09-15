@@ -16,6 +16,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 - (void)setupHomeScreen1;
+- (void)setupFirstLoginScreen;
 
 @end
 

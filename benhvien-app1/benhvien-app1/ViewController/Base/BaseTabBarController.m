@@ -9,6 +9,8 @@
 #import "BaseTabBarController.h"
 #import "MenuView.h"
 #import <PureLayout/PureLayout.h>
+#import "AppDelegate.h"
+#import "UserDataManager.h"
 
 @interface BaseTabBarController ()
 
@@ -31,8 +33,10 @@
 }
 
 - (void)setupMenuView {
-    NSArray *hosArray = @[@{@"icon":@"search-btn-icon", @"title":@"Tìm kiếm"},
-                          @{@"icon":@"information-menu-icon", @"title":@"Thông tin"}];
+    NSArray *hosArray = @[@{@"icon":@"", @"title":@""},
+                          @{@"icon":@"search-btn-icon", @"title":@"Tìm kiếm"},
+                          @{@"icon":@"information-menu-icon", @"title":@"Thông tin"},
+                          @{@"icon":@"logout-icon",@"title":@"Đăng xuất"}];
     NSArray *nibViews = [[NSBundle mainBundle]loadNibNamed:@"MenuView" owner:self options:nil];
     _menuView = (MenuView *)[nibViews objectAtIndex:0];
    self.window = [[[UIApplication sharedApplication] delegate]window];
@@ -72,10 +76,28 @@
 - (void)didSelectMenuAtIndenx:(NSInteger)menuIndex {
     [self animatedMenu:!self.menuDisplayed];
     self.selectedIndex = menuIndex;
+    if (menuIndex == 1) {
+        [self findInformation];
+    }
+    
+    if (menuIndex == 3) {
+        [self logout];
+    }
+}
+
+- (void)findInformation {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication ]delegate];
+    [app setupHomeScreen1];
+}
+
+- (void)logout {
+    [[UserDataManager sharedClient] clearUserData];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication ]delegate];
+    [app setupFirstLoginScreen];
 }
 
 - (void)closeSideMenuBar {
-        
+    
 }
 
 @end

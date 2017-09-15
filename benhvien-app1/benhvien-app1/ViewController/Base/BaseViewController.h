@@ -12,6 +12,8 @@
 #import "ApiRequest.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "UIAlertController+Blocks.h"
+#import "Constants.h"
+#import "UserDataManager.h"
 
 @interface BaseViewController : UIViewController
 

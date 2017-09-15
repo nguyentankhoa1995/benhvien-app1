@@ -17,6 +17,7 @@
 #import "FirstLoginViewController.h"
 #import "BaseTabBarController.h"
 #import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocompleteQuery.h>
+#import "UserDataManager.h"
 
 @interface AppDelegate ()
 
@@ -26,8 +27,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self setupFirstLoginScreen];
+//    [self setupFirstLoginScreen];
 //    [self setupHomeScreen1];
+    if ([UserDataManager sharedClient].accessToken && [UserDataManager sharedClient].accessToken.length > 0) {
+        [self setupHomeScreen1];
+    }else {
+        [self setupFirstLoginScreen];
+    }
     [self setupApplicationTheme];
     [self setupApplicationData];
     [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];

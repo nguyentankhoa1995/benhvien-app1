@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5393D2DF51CFB95DA6576AED /* Pods_benhvien_app1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E240FE4F3C94EB30D40EC4B /* Pods_benhvien_app1.framework */; };
+		EE1815971F6BEA7F00E20E69 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1815961F6BEA7F00E20E69 /* ChangePasswordViewController.m */; };
+		EE18159B1F6BF8D300E20E69 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE18159A1F6BF8D300E20E69 /* UserDataManager.m */; };
+		EE18159E1F6BFAB200E20E69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE18159D1F6BFAB200E20E69 /* Home.storyboard */; };
 		EE31932F1F34994F0093E94C /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE31932E1F34994F0093E94C /* ApiManager.m */; };
 		EE3193321F3499680093E94C /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3193311F3499680093E94C /* ApiRequest.m */; };
 		EE3193381F34999E0093E94C /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3193371F34999D0093E94C /* ApiResponse.m */; };
-		EE3C1EF91F31F58500F93EDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3C1EF81F31F58500F93EDB /* Home.storyboard */; };
 		EE3C1F421F31F62400F93EDB /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F241F31F62400F93EDB /* BaseNavigationController.m */; };
 		EE3C1F431F31F62400F93EDB /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F261F31F62400F93EDB /* BaseTabBarController.m */; };
 		EE3C1F441F31F62400F93EDB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C1F281F31F62400F93EDB /* BaseViewController.m */; };
@@ -69,6 +71,12 @@
 /* Begin PBXFileReference section */
 		5E240FE4F3C94EB30D40EC4B /* Pods_benhvien_app1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_benhvien_app1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9A50061C7870D32AD38314 /* Pods-benhvien-app1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app1.release.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app1/Pods-benhvien-app1.release.xcconfig"; sourceTree = "<group>"; };
+		EE1815951F6BEA7F00E20E69 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		EE1815961F6BEA7F00E20E69 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		EE1815991F6BF8D300E20E69 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		EE18159A1F6BF8D300E20E69 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
+		EE18159D1F6BFAB200E20E69 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EE1815A01F6BFB0500E20E69 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		EE31932C1F3497630093E94C /* ApiEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiEndpoint.h; sourceTree = "<group>"; };
 		EE31932D1F34994F0093E94C /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		EE31932E1F34994F0093E94C /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
@@ -76,7 +84,6 @@
 		EE3193311F3499680093E94C /* ApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiRequest.m; sourceTree = "<group>"; };
 		EE3193361F34999D0093E94C /* ApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiResponse.h; sourceTree = "<group>"; };
 		EE3193371F34999D0093E94C /* ApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiResponse.m; sourceTree = "<group>"; };
-		EE3C1EF81F31F58500F93EDB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EE3C1F231F31F62400F93EDB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		EE3C1F241F31F62400F93EDB /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		EE3C1F251F31F62400F93EDB /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
@@ -205,6 +212,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE1815941F6BEA5D00E20E69 /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				EE1815951F6BEA7F00E20E69 /* ChangePasswordViewController.h */,
+				EE1815961F6BEA7F00E20E69 /* ChangePasswordViewController.m */,
+			);
+			path = "Change Password";
+			sourceTree = "<group>";
+		};
+		EE1815981F6BF8A500E20E69 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1815991F6BF8D300E20E69 /* UserDataManager.h */,
+				EE18159A1F6BF8D300E20E69 /* UserDataManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EE18159C1F6BFAB200E20E69 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				EE18159D1F6BFAB200E20E69 /* Home.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		EE18159F1F6BFAF600E20E69 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EE1815A01F6BFB0500E20E69 /* Constants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		EE31932B1F3497380093E94C /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,14 +260,6 @@
 			name = Api;
 			path = "benhvien-app1/Api";
 			sourceTree = SOURCE_ROOT;
-		};
-		EE3C1EF71F31F58500F93EDB /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-				EE3C1EF81F31F58500F93EDB /* Home.storyboard */,
-			);
-			path = StoryBoards;
-			sourceTree = "<group>";
 		};
 		EE3C1F211F31F62400F93EDB /* ViewController */ = {
 			isa = PBXGroup;
@@ -253,6 +286,7 @@
 		EE3C1F291F31F62400F93EDB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EE1815941F6BEA5D00E20E69 /* Change Password */,
 				EEE692D01F543DFA00272AFD /* AppInfo */,
 				EE934ADD1F50481300105D2D /* Direction */,
 				EE8E59D01F47109B00C3DBEC /* Addvance */,
@@ -364,11 +398,13 @@
 		EE461DC81F2B600F00124E67 /* benhvien-app1 */ = {
 			isa = PBXGroup;
 			children = (
+				EE18159F1F6BFAF600E20E69 /* Constants */,
+				EE1815981F6BF8A500E20E69 /* Managers */,
 				EE472E011F41D46F00700401 /* Resource */,
+				EE18159C1F6BFAB200E20E69 /* StoryBoards */,
 				EEE692C51F54369200272AFD /* Views */,
 				EE31932B1F3497380093E94C /* Api */,
 				EE461DF11F2B611600124E67 /* Libraries */,
-				EE3C1EF71F31F58500F93EDB /* StoryBoards */,
 				EE3C1F511F31F63800F93EDB /* Models */,
 				EE3C1F211F31F62400F93EDB /* ViewController */,
 				EE461DD51F2B600F00124E67 /* Assets.xcassets */,
@@ -595,12 +631,12 @@
 			files = (
 				EE461DD91F2B600F00124E67 /* LaunchScreen.storyboard in Resources */,
 				EEE692CF1F54399500272AFD /* MenuViewCell.xib in Resources */,
+				EE18159E1F6BFAB200E20E69 /* Home.storyboard in Resources */,
 				EEE692CA1F5436E600272AFD /* MenuView.xib in Resources */,
 				EE461DD61F2B600F00124E67 /* Assets.xcassets in Resources */,
 				EE3C1F4A1F31F62400F93EDB /* HospitalNameCell.xib in Resources */,
 				EE3C1F4F1F31F62400F93EDB /* ThumImageTableViewCell.xib in Resources */,
 				EEAF4D251F4AFA8F00E106B3 /* MapCell.xib in Resources */,
-				EE3C1EF91F31F58500F93EDB /* Home.storyboard in Resources */,
 				EE8E59CF1F46FBF100C3DBEC /* cities.json in Resources */,
 				EEAF4D201F4AFA7100E106B3 /* ImageCell.xib in Resources */,
 				EE3C1F481F31F62400F93EDB /* AddressCell.xib in Resources */,
@@ -669,6 +705,7 @@
 				EEAF4D311F4AFC9A00E106B3 /* HospitalNameModel.m in Sources */,
 				EE934AE01F50481300105D2D /* DirectionViewController.m in Sources */,
 				EEAF4D2B1F4AFB6900E106B3 /* ImageCell.m in Sources */,
+				EE18159B1F6BF8D300E20E69 /* UserDataManager.m in Sources */,
 				EEE692C81F5436BF00272AFD /* MenuView.m in Sources */,
 				EE3C1F431F31F62400F93EDB /* BaseTabBarController.m in Sources */,
 				EE3C1F491F31F62400F93EDB /* HospitalNameCell.m in Sources */,
@@ -704,6 +741,7 @@
 				EE31932F1F34994F0093E94C /* ApiManager.m in Sources */,
 				EE461DFF1F2B611600124E67 /* UIColor+Hex.m in Sources */,
 				EEFBE6651F60254000712381 /* FirstLoginViewController.m in Sources */,
+				EE1815971F6BEA7F00E20E69 /* ChangePasswordViewController.m in Sources */,
 				EE3C1F4E1F31F62400F93EDB /* ThumImageTableViewCell.m in Sources */,
 				EE8E59D31F47109B00C3DBEC /* AdvanceViewController.m in Sources */,
 			);

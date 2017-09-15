@@ -26,7 +26,7 @@
     searchResult = [NSArray new];
     self.placesTableView.delegate = self;
     self.placesTableView.dataSource = self;
-//    self.placesTableView.estimatedRowHeight = 44.0;
+//   self.placesTableView.estimatedRowHeight = 44.0;
 }
 
 - (void)didReceiveMemoryWarning {

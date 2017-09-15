@@ -40,7 +40,7 @@
 - (IBAction)searchButton:(id)sender {
     NSString *hospitalName = self.searchTextField.text;
     [self validateHospitalName:hospitalName completion:^(BOOL isValidate, NSString *message){
-        if (isValidate){
+        if (isValidate) {
             [self searchHospital: hospitalName];
         }else{
             [self showMessage:@"Lỗi" message:message];
@@ -52,16 +52,20 @@
     [self showHUD];
     [ApiRequest searchHospitalByName:hospitalName completionBlock:^(ApiResponse * response, NSError *error){
         [self hideHUD];
-        NSArray *hospitals = [response.data objectForKey:@"hospitals"];
-        if (hospitals.count <= 0) {
-            [self showMessage:@"Thông báo" message:@"Không tìm thấy bệnh viện nào" ];
+        if (error) {
+            [self showMessage:@"Lỗi" message:error.description];
         }else {
-            NSMutableArray *hospitalData = [NSMutableArray new];
-            for (NSDictionary *data in hospitals) {
-                Hospital *hos = [Hospital initWithResponse:data];
-                [hospitalData addObject:hos];
+            NSArray *hospitals = [response.data objectForKey:@"hospitals"];
+            if (hospitals.count <= 0) {
+                [self showMessage:@"Thông báo" message:@"Không tìm thấy bệnh viện nào" ];
+            }else {
+                NSMutableArray *hospitalData = [NSMutableArray new];
+                for (NSDictionary *data in hospitals) {
+                    Hospital *hos = [Hospital initWithResponse:data];
+                    [hospitalData addObject:hos];
+                }
+                [self passData:hospitalData];
             }
-            [self passData:hospitalData];
         }
     }];
 }
@@ -79,7 +83,7 @@
     [self.navigationController pushViewController:vc animated:true];
 }
 
-- (void)passData :(NSMutableArray *)hospital{
+- (void)passData :(NSMutableArray *)hospital {
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
     vc.hospitalList = hospital;
     [self.navigationController pushViewController:vc animated:true];

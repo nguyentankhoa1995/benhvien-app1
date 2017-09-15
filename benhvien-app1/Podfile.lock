@@ -31,6 +31,7 @@ PODS:
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
   - MBProgressHUD (1.0.0)
+  - NSUserDefaults+Utility (0.1.0)
   - OCGoogleDirectionsAPI (0.1.7)
   - PureLayout (3.0.2)
   - SDWebImage (3.8.2):
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 4.0)
   - KASlideShow (~> 3.0)
   - MBProgressHUD (~> 1.0.0)
+  - NSUserDefaults+Utility (~> 0.1)
   - OCGoogleDirectionsAPI
   - PureLayout (~> 3.0)
   - SDWebImage (= 3.8.2)
@@ -60,10 +62,11 @@ SPEC CHECKSUMS:
   KASlideShow: d737c734ee603ed4fc7de09876d5193192e74ee4
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  NSUserDefaults+Utility: bd0b5193f25cf45fb1aed825f2be39a9904d33fe
   OCGoogleDirectionsAPI: 03c35fbedfe01506b6270a94259969bc60d6f7ce
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 722858eebef4479800bbaf4cbd2bddc103e56c47
+PODFILE CHECKSUM: d41d9c6f0679e6da49c56893eb844ae0b211c35d
 
 COCOAPODS: 1.2.1

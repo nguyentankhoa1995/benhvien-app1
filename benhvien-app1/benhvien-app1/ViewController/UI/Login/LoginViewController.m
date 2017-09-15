@@ -57,8 +57,7 @@
     [self.view endEditing:true];
     if (_loginState == LOGIN) {
         [self loginUser];
-    }
-    if (_loginState == REGISTERS) {
+    }else {
         [self registerUser];
     }
 }
@@ -96,6 +95,7 @@
         if (error || !response.success) {
             [self showMessage:@"Lỗi" message:response.message];
         }else {
+            [[UserDataManager sharedClient]setUserData:response.data];
             AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             [app setupHomeScreen1];
         }
@@ -110,10 +110,10 @@
             [self showMessage:@"Lỗi" message:response.message];
         }else {
             
+//                [[UserDataManager sharedClient]setUserData:response.data];
                 AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
                 [app setupHomeScreen1];
-            
-        }
+            }
     }];
 
 }
