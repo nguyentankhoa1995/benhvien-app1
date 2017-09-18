@@ -744,10 +744,10 @@
             </objects>
             <point key="canvasLocation" x="-42622" y="726"/>
         </scene>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="UY3-tn-f7Z">
             <objects>
-                <viewController id="aYy-6b-uCe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="aYy-6b-uCe" customClass="AccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zcv-nF-elC"/>
                         <viewControllerLayoutGuide type="bottom" id="z8F-T5-a2F"/>
@@ -765,7 +765,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZZ-Xg-sKp">
                                                 <rect key="frame" x="97" y="15" width="180" height="190"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dP3-aY-fjs">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IOS" translatesAutoresizingMaskIntoConstraints="NO" id="dP3-aY-fjs">
                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="190"/>
                                                     </imageView>
                                                 </subviews>
@@ -983,6 +983,11 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="accountCityLabel" destination="Stb-RM-oc9" id="h6q-O8-Xiz"/>
+                        <outlet property="accountEmailLabel" destination="dYv-Zw-yk8" id="YTK-1F-1KY"/>
+                        <outlet property="accountNameLabel" destination="PQ8-et-ZqS" id="1nM-No-iFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ue8-Dm-CRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1411,6 +1416,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IOS" width="225" height="225"/>
         <image name="avatar-placeholder" width="180" height="180"/>
         <image name="btn-email" width="320" height="45"/>
         <image name="btn-facebook" width="320" height="45"/>

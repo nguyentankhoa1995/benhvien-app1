@@ -15,12 +15,12 @@
     NSDictionary *parameters = @{@"email": email,
                                  @"password": password,
                                  };
-    [[ApiManager shareClient] requestApiWithEndpoint:Login method:POST parameters:parameters completion:completion];
+    [[ApiManager shareClient] requestApiWithEndpoint:Login method:POST parameters:parameters hasAuth:false completion:completion];
 }
 
 + (void)searchHospitalByName:(NSString *)name completionBlock:(ApiCompletionBlock)completion{
     NSDictionary *parameters = @{@"name": name};
-    [[ApiManager shareClient] requestApiWithEndpoint:SearchByName  method:GET parameters:parameters completion:completion];
+    [[ApiManager shareClient] requestApiWithEndpoint:SearchByName  method:GET parameters:parameters hasAuth:true completion:completion];
 
 }
 
@@ -28,6 +28,7 @@
     [[ApiManager shareClient] requestApiWithEndpoint:Cities
                                               method:GET
                                           parameters:[NSDictionary new]
+                                             hasAuth:true
                                           completion:completion];
 }
 
@@ -35,17 +36,18 @@
     NSDictionary *parameters = @{@"city":city,
                                @"district":district,
                                };
-    [[ApiManager shareClient]requestApiWithEndpoint:SearchByNameandDistrict method:GET parameters:parameters completion:completion];
+    [[ApiManager shareClient]requestApiWithEndpoint:SearchByNameandDistrict method:GET parameters:parameters hasAuth:true completion:completion];
 }
 
 + (void)searchHospitalByCity:(NSString *)city completionBlock:(ApiCompletionBlock)completion {
     NSDictionary *paramenters = @{@"city":city};
-    [[ApiManager shareClient] requestApiWithEndpoint:SearchHospitalCity method:GET parameters:paramenters completion:completion];
+    [[ApiManager shareClient] requestApiWithEndpoint:SearchHospitalCity method:GET parameters:paramenters hasAuth:true completion:completion];
 }
 
 + (void)getHospitalInfo:(NSString *)hospitalId completionBlock:(ApiCompletionBlock)completion {
     NSDictionary *paramenters = @{@"id":hospitalId};
-    [[ApiManager shareClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:paramenters completion:completion];
+    [[ApiManager shareClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:paramenters hasAuth:true
+                                          completion:completion];
 }
 
 + (void)registerUser:(NSString *)email password:(NSString *)passaword city:(NSString *)city fullname:(NSString *)fullname completionBlock:(ApiCompletionBlock)completion {
@@ -54,7 +56,7 @@
                                   @"role":@"email",
                                   @"city":city,
                                   @"fullName":fullname};
-    [[ApiManager shareClient] requestApiWithEndpoint:Register method:POST parameters:paramenters completion:completion];
+    [[ApiManager shareClient] requestApiWithEndpoint:Register method:POST parameters:paramenters hasAuth:false completion:completion];
 }
 
 @end

@@ -33,8 +33,7 @@
 }
 
 - (void)setupMenuView {
-    NSArray *hosArray = @[@{@"icon":@"", @"title":@""},
-                          @{@"icon":@"search-btn-icon", @"title":@"Tìm kiếm"},
+    NSArray *hosArray = @[@{@"icon":@"search-btn-icon", @"title":@"Tìm kiếm"},
                           @{@"icon":@"information-menu-icon", @"title":@"Thông tin"},
                           @{@"icon":@"logout-icon",@"title":@"Đăng xuất"}];
     NSArray *nibViews = [[NSBundle mainBundle]loadNibNamed:@"MenuView" owner:self options:nil];
@@ -76,18 +75,9 @@
 - (void)didSelectMenuAtIndenx:(NSInteger)menuIndex {
     [self animatedMenu:!self.menuDisplayed];
     self.selectedIndex = menuIndex;
-    if (menuIndex == 1) {
-        [self findInformation];
-    }
-    
-    if (menuIndex == 3) {
+    if (menuIndex == 2) {
         [self logout];
     }
-}
-
-- (void)findInformation {
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication ]delegate];
-    [app setupHomeScreen1];
 }
 
 - (void)logout {

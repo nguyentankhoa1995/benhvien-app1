@@ -10,7 +10,7 @@
 #import "BaseNavigationController.h"
 #import "AppDelegate.h"
 #import "PlacesViewController.h"
-
+#import "AccountViewController.h"
 
 @interface LoginViewController ()
 {
@@ -36,7 +36,7 @@
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Huỷ bỏ" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed:)];
     self.navigationItem.leftBarButtonItem = cancelButton;
-    [self showRegister];
+    [self showLogin];
 }
 
 - (void)showLogin {
@@ -110,7 +110,7 @@
             [self showMessage:@"Lỗi" message:response.message];
         }else {
             
-//                [[UserDataManager sharedClient]setUserData:response.data];
+               [[UserDataManager sharedClient]setUserData:response.data];
                 AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
                 [app setupHomeScreen1];
             }
@@ -198,5 +198,6 @@
     BaseNavigationController *nav =  [[BaseNavigationController alloc]initWithRootViewController:vc];
     [self presentViewController:nav animated:true completion:nil];
 }
+
 
 @end

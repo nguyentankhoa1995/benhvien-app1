@@ -44,6 +44,7 @@
 		EE8E59D71F471D3B00C3DBEC /* HospitalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8E59D61F471D3B00C3DBEC /* HospitalTableViewCell.m */; };
 		EE934AE01F50481300105D2D /* DirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE934ADF1F50481300105D2D /* DirectionViewController.m */; };
 		EE934AE51F504F6C00105D2D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE934AE41F504F6C00105D2D /* MapKit.framework */; };
+		EEABF4491F6FD8E500AC95A7 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEABF4481F6FD8E500AC95A7 /* AccountViewController.m */; };
 		EEAF4D201F4AFA7100E106B3 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEAF4D1F1F4AFA7100E106B3 /* ImageCell.xib */; };
 		EEAF4D251F4AFA8F00E106B3 /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEAF4D241F4AFA8F00E106B3 /* MapCell.xib */; };
 		EEAF4D281F4AFB5200E106B3 /* MapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAF4D271F4AFB5200E106B3 /* MapCell.m */; };
@@ -138,6 +139,8 @@
 		EE934ADF1F50481300105D2D /* DirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionViewController.m; sourceTree = "<group>"; };
 		EE934AE31F504E9200105D2D /* MyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MyLocation.gpx; path = "benhvien-app1/Models/MyLocation.gpx"; sourceTree = SOURCE_ROOT; };
 		EE934AE41F504F6C00105D2D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EEABF4471F6FD8E500AC95A7 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		EEABF4481F6FD8E500AC95A7 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		EEAF4D1F1F4AFA7100E106B3 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		EEAF4D241F4AFA8F00E106B3 /* MapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapCell.xib; sourceTree = "<group>"; };
 		EEAF4D261F4AFB5200E106B3 /* MapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCell.h; sourceTree = "<group>"; };
@@ -286,6 +289,7 @@
 		EE3C1F291F31F62400F93EDB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EEABF4461F6FD8C700AC95A7 /* Account */,
 				EE1815941F6BEA5D00E20E69 /* Change Password */,
 				EEE692D01F543DFA00272AFD /* AppInfo */,
 				EE934ADD1F50481300105D2D /* Direction */,
@@ -501,6 +505,15 @@
 				EE934ADF1F50481300105D2D /* DirectionViewController.m */,
 			);
 			path = Direction;
+			sourceTree = "<group>";
+		};
+		EEABF4461F6FD8C700AC95A7 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				EEABF4471F6FD8E500AC95A7 /* AccountViewController.h */,
+				EEABF4481F6FD8E500AC95A7 /* AccountViewController.m */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		EEB7A89E1F66AC7900CD848A /* Places */ = {
@@ -725,6 +738,7 @@
 				EE3C1F501F31F62400F93EDB /* SearchResultViewController.m in Sources */,
 				EE8E59D71F471D3B00C3DBEC /* HospitalTableViewCell.m in Sources */,
 				EEAF4D281F4AFB5200E106B3 /* MapCell.m in Sources */,
+				EEABF4491F6FD8E500AC95A7 /* AccountViewController.m in Sources */,
 				EE3C1F441F31F62400F93EDB /* BaseViewController.m in Sources */,
 				EE3C1F461F31F62400F93EDB /* HospitalDetailViewController.m in Sources */,
 				EECF268A1F2F6B1C000A42BB /* HLTableView.m in Sources */,

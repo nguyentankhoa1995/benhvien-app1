@@ -7,7 +7,7 @@
 //
 
 #import "ApiManager.h"
-
+#import "UserDataManager.h"
 
 
 @interface ApiManager() {
@@ -35,10 +35,22 @@
     self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
 }
 
+- (void)setUpHeader {
+    [self.manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [self.manager.requestSerializer setValue:[self getAccessToken] forHTTPHeaderField:@"Authorization"];
+}
 
+- (NSString *)getAccessToken {
+    NSString *token = [NSString stringWithFormat:@"JWT %@",[UserDataManager sharedClient].accessToken];
+    return token;
+}
 
-- (void)requestApiWithEndpoint:(NSString *)enpoint method:(ApiMethod)method parameters:(NSDictionary *)parameters completion:(ApiCompletionBlock)completion {
+- (void)requestApiWithEndpoint:(NSString *)enpoint method:(ApiMethod)method parameters:(NSDictionary *)parameters hasAuth:(BOOL)hasAuth completion:(ApiCompletionBlock)completion {
     NSString *fullURL = [NSString stringWithFormat:@"%@%@", BaseURL, enpoint];
+    NSLog(@"URL: %@", fullURL);
+    if (hasAuth){
+        [self setUpHeader];
+    }
     switch (method) {
         case GET: {
             [self processGetRequestWith:fullURL parameters:parameters completion:completion];

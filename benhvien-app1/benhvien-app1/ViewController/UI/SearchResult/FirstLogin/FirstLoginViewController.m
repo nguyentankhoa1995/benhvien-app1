@@ -19,10 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self showHUD];
-    [ApiRequest registerUser:@"happyhappy12a6@gmail.com" password:@"111111" city:@"Ho Chi Minh" fullname:@"Happy Nguyen" completionBlock:^(ApiResponse *response , NSError *error) {
-        [self hideHUD];
-    }];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,4 +37,5 @@
 - (IBAction)facebookButtonPressed:(id)sender {
    
 }
+
 @end

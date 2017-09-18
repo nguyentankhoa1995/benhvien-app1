@@ -8,6 +8,7 @@
 
 #import "MenuView.h"
 #import "MenuViewCell.h"
+#import "UserDataManager.h"
 
 @interface MenuView()<UITableViewDelegate,UITableViewDataSource>
 
@@ -16,11 +17,16 @@
 @implementation MenuView
 
 - (void)setupMenuView {
+    _accountImageView.layer.cornerRadius = 17;
+    _accountImageView.layer.borderWidth = 0.5;
     _menuItems = [NSArray new];
     _menuTableView.dataSource = self;
     _menuTableView.delegate = self;
     _menuTableView.estimatedRowHeight = 60.0;
     [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
+    self.menuTableView.tableFooterView = [UIView new];
+    [self.menuTableView setScrollEnabled:false];
+    self.nameAccountLabel.text = [UserDataManager sharedClient].fullName;
 }
 
 - (void)setMenuItems:(NSArray *)menuItems {
