@@ -19,5 +19,6 @@
 + (void)searchHospitalByCity:(NSString *)city completionBlock:(ApiCompletionBlock)completion;
 + (void)getHospitalInfo:(NSString *)hospitalId completionBlock:(ApiCompletionBlock)completion;
 + (void)registerUser:(NSString *)email password:(NSString *)passaword city:(NSString *)city fullname:(NSString *)fullname completionBlock:(ApiCompletionBlock)completion;
++ (void)changePasswordWithUserId:(NSString *)userId oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword completionBlock:(ApiCompletionBlock)completion;
 
 @end

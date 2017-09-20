@@ -8,6 +8,9 @@
 
 #import "AccountViewController.h"
 #import "LoginViewController.h"
+#import "UserDataManager.h"
+#import "ChangePasswordViewController.h"
+#import "BaseNavigationController.h"
 
 @interface AccountViewController ()
 
@@ -18,13 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tài khoản";
-    self.accountList = [NSMutableArray new];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (void)setUpUserInterface {
+    [self showMenuButton];
+    self.accountNameTextField.text = [UserDataManager sharedClient].fullName;
+    self.accountEmailTextField.text = [UserDataManager sharedClient].email;
+    self.accountCityTextField.text = [UserDataManager sharedClient].city;
+}
+
+- (IBAction)changePaswordButton:(id)sender {
+    ChangePasswordViewController *vc = (ChangePasswordViewController *)[ChangePasswordViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:true completion:nil];
+}
 
 @end

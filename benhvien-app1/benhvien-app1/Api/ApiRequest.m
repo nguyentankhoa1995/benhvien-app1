@@ -59,4 +59,15 @@
     [[ApiManager shareClient] requestApiWithEndpoint:Register method:POST parameters:paramenters hasAuth:false completion:completion];
 }
 
++ (void)changePasswordWithUserId:(NSString *)userId oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword completionBlock:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"password":oldPassword,
+                                 @"newPassword":newPassword,
+                                 @"id":userId};
+    [[ApiManager shareClient] requestApiWithEndpoint:ChangePassEndPoint
+                                              method:PUT
+                                          parameters:parameters
+                                             hasAuth:true
+                                          completion:completion];
+}
+
 @end

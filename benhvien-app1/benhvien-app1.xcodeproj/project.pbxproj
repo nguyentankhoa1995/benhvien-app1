@@ -67,6 +67,7 @@
 		EEE692D31F543E1E00272AFD /* AppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE692D21F543E1E00272AFD /* AppInfoViewController.m */; };
 		EEFBE6651F60254000712381 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFBE6641F60254000712381 /* FirstLoginViewController.m */; };
 		EEFBE6691F6027EE00712381 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFBE6681F6027EE00712381 /* LoginViewController.m */; };
+		EEFF6A181F729872000DB5B2 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF6A171F729872000DB5B2 /* ForgotPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +182,8 @@
 		EEFBE6641F60254000712381 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
 		EEFBE6671F6027EE00712381 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EEFBE6681F6027EE00712381 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EEFF6A161F729872000DB5B2 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		EEFF6A171F729872000DB5B2 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		F33F508D9455E5C9E0F68DB1 /* Pods-benhvien-app1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app1/Pods-benhvien-app1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,8 +281,8 @@
 			children = (
 				EE3C1F231F31F62400F93EDB /* BaseNavigationController.h */,
 				EE3C1F241F31F62400F93EDB /* BaseNavigationController.m */,
-				EE3C1F271F31F62400F93EDB /* BaseViewController.h */,
 				EE3C1F281F31F62400F93EDB /* BaseViewController.m */,
+				EE3C1F271F31F62400F93EDB /* BaseViewController.h */,
 				EE3C1F251F31F62400F93EDB /* BaseTabBarController.h */,
 				EE3C1F261F31F62400F93EDB /* BaseTabBarController.m */,
 			);
@@ -289,6 +292,7 @@
 		EE3C1F291F31F62400F93EDB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EEFF6A151F7297E9000DB5B2 /* Forgot Password */,
 				EEABF4461F6FD8C700AC95A7 /* Account */,
 				EE1815941F6BEA5D00E20E69 /* Change Password */,
 				EEE692D01F543DFA00272AFD /* AppInfo */,
@@ -581,6 +585,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		EEFF6A151F7297E9000DB5B2 /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF6A161F729872000DB5B2 /* ForgotPasswordViewController.h */,
+				EEFF6A171F729872000DB5B2 /* ForgotPasswordViewController.m */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -751,6 +764,7 @@
 				EE461E021F2B611600124E67 /* UIViewController+Storyboard.m in Sources */,
 				EEAF4D371F4AFCB900E106B3 /* ImageModel.m in Sources */,
 				EEAF4D3D1F4AFCD100E106B3 /* MapModel.m in Sources */,
+				EEFF6A181F729872000DB5B2 /* ForgotPasswordViewController.m in Sources */,
 				EECF268C1F2F6B1C000A42BB /* HLTableViewSection.m in Sources */,
 				EE31932F1F34994F0093E94C /* ApiManager.m in Sources */,
 				EE461DFF1F2B611600124E67 /* UIColor+Hex.m in Sources */,

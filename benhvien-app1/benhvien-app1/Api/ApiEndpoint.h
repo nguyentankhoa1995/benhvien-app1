@@ -18,6 +18,8 @@
 #define HospitalInfo                        @"hospitalInfo"
 #define GoogleApiKey                        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 #define Login                               @"authenticate"
+
 #define Register                            @"register"
+#define ChangePassEndPoint                  @"changePass"
 
 #endif /* ApiEndpoint_h */

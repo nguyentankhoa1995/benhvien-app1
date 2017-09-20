@@ -18,6 +18,7 @@
 #import "BaseTabBarController.h"
 #import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocompleteQuery.h>
 #import "UserDataManager.h"
+#import "AccountViewController.h"
 
 
 @interface AppDelegate ()
@@ -62,7 +63,9 @@
 }
 
 - (void)setupHomeScreen1 {
-    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    AccountViewController *accountVC = (AccountViewController *)[AccountViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *accountNav = [[BaseNavigationController alloc] initWithRootViewController:accountVC];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     HomeViewController *homeVC = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
@@ -73,7 +76,8 @@
     BaseNavigationController *appInfonNav = [[BaseNavigationController alloc] initWithRootViewController:appInfoVC];
     
     BaseTabBarController *tab = [BaseTabBarController new];
-    tab.viewControllers = @[homeNav , appInfonNav];
+    tab.viewControllers = @[accountNav, homeNav , appInfonNav];
+    tab.selectedIndex = 1;
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
 }

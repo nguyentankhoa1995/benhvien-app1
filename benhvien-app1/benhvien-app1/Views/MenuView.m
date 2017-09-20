@@ -9,6 +9,9 @@
 #import "MenuView.h"
 #import "MenuViewCell.h"
 #import "UserDataManager.h"
+#import "AccountViewController.h"
+#import "BaseNavigationController.h"
+#import "AppDelegate.h"
 
 @interface MenuView()<UITableViewDelegate,UITableViewDataSource>
 
@@ -54,8 +57,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:false];
     if (self.onDidSelectItemAtIndex){
-        self.onDidSelectItemAtIndex(indexPath.row);
+        self.onDidSelectItemAtIndex(indexPath.row + 1);
     }
 }
+
+- (IBAction)didAccountScreenButton:(id)sender {
+    if (self.onDidSelectHeader) {
+        self.onDidSelectHeader();
+    }
+}
+
 
 @end

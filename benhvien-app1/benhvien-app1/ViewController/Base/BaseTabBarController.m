@@ -45,6 +45,9 @@
     __weak BaseTabBarController *wSelf = self;
     [_menuView setOnDidSelectItemAtIndex:^(NSUInteger index) {
         [wSelf didSelectMenuAtIndenx:index];
+    [_menuView setOnDidSelectHeader:^{
+        [wSelf didSelectMenuAtIndenx:0];
+    }];
     }];
 }
 
@@ -75,7 +78,7 @@
 - (void)didSelectMenuAtIndenx:(NSInteger)menuIndex {
     [self animatedMenu:!self.menuDisplayed];
     self.selectedIndex = menuIndex;
-    if (menuIndex == 2) {
+    if (menuIndex == 3) {
         [self logout];
     }
 }

@@ -7,6 +7,8 @@
 //
 
 #import "ChangePasswordViewController.h"
+#import "UserDataManager.h"
+#import "AppDelegate.h"
 
 @interface ChangePasswordViewController ()
 
@@ -16,22 +18,103 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"Đổi mật khẩu";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setUpUserInterface {
+    self.title = @"Đăng nhập";
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Xong" style:UIBarButtonItemStylePlain target:self action:@selector(doneButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+    
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Huỷ bỏ" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed:)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
+    
 }
-*/
+
+- (IBAction)doneButtonPressed:(id)sender {
+    [self.view endEditing:true];
+    NSString *oldPassword = self.oldPasswordTexField.text;
+    NSString *newPassword = self.passwordNewTextField.text;
+    NSString *changePassword = self.changePasswordTextField.text;
+    [self validateOldPassword:oldPassword newPassword:newPassword changePassword:changePassword completion:^(NSString *message, BOOL isValid) {
+        if (isValid) {
+            [self showMessage:@"Lỗi" message:message];
+        }else {
+        
+
+        }
+    }];
+
+        
+}
+
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self.view endEditing:true];
+    [UIAlertController showAlertInViewController:self
+                                       withTitle:@"Xác nhận"
+                                         message:@"Bạn có chắc chắn muốn huỷ bỏ?"
+                               cancelButtonTitle:@"Cancel"
+                          destructiveButtonTitle:@"Yes"
+                               otherButtonTitles:nil
+                                        tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
+                                            if (buttonIndex == controller.cancelButtonIndex) {
+                                                
+                                            } else if (buttonIndex == controller.destructiveButtonIndex) {
+                                                [self.navigationController dismissViewControllerAnimated:true completion:nil];
+                                            } else if (buttonIndex >= controller.firstOtherButtonIndex) {
+                                                
+                                            }
+                                        }];
+    
+}
+
+
+- (void)changePasswordWithUserId: (NSString *)userID
+                     oldPassword:(NSString *)oldPassword
+                     newPassword:(NSString *)newPassword
+                  changePassword:(NSString *)changePassword{
+    [self showHUD];
+    [ApiRequest changePasswordWithUserId:userID oldPassword:oldPassword newPassword:newPassword completionBlock:^(ApiResponse *response, NSError *error) {
+                [self hideHUD];
+            if (error || !response.success) {
+                [self showMessage:@"Lỗi" message:response.message];
+            }else {
+                [self.navigationController dismissViewControllerAnimated:true completion:nil];
+            }
+
+    }];
+
+}
+
+- (void)validateOldPassword:(NSString *)oldPassword
+                newPassword:(NSString *)newPassword
+             changePassword:(NSString *)changePassword completion:(void(^)(NSString *message, BOOL isValid))block {
+    if (!oldPassword || oldPassword.length == 0) {
+        block(@"Bạn vui lòng mật khẩu cũ", NO);
+        return;
+    }
+    
+    if (!newPassword || newPassword.length == 0) {
+        block(@"Bạn vui lòng nhập mật khẩu mới", NO);
+        return;
+    }
+    
+    if (!changePassword || changePassword.length == 0) {
+        block(@"Vui lòng nhập lại mật khẩu mới", NO);
+    }
+    
+    if (![newPassword isEqualToString:changePassword]) {
+         block(@"Mật khẩu không trùng khớp", NO);
+        return;
+    }
+    
+    block(@"", YES);
+}
+
+
 
 @end

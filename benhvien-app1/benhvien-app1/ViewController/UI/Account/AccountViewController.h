@@ -7,11 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "ApiRequest.h"
 
 @interface AccountViewController : BaseViewController
-@property (weak, nonatomic) IBOutlet UILabel *accountNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *accountEmailLabel;
-@property (weak, nonatomic) IBOutlet UILabel *accountCityLabel;
+@property (weak, nonatomic) IBOutlet UITextField *accountNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *accountEmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *accountCityTextField;
 
+- (IBAction)changePaswordButton:(id)sender;
 @property (strong,nonatomic)NSMutableArray *accountList;
 @end
