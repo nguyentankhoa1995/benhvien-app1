@@ -26,7 +26,7 @@
 }
 
 - (void)setUpUserInterface {
-    self.title = @"Đăng nhập";
+//    self.title = @"Đăng nhập";
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Xong" style:UIBarButtonItemStylePlain target:self action:@selector(doneButtonPressed:)];
     self.navigationItem.rightBarButtonItem = doneButton;
     
@@ -41,11 +41,13 @@
     NSString *newPassword = self.passwordNewTextField.text;
     NSString *changePassword = self.changePasswordTextField.text;
     [self validateOldPassword:oldPassword newPassword:newPassword changePassword:changePassword completion:^(NSString *message, BOOL isValid) {
-        if (isValid) {
+        if (!isValid) {
             [self showMessage:@"Lỗi" message:message];
         }else {
         
-
+            [self changePasswordWithUserId:[UserDataManager sharedClient].userId
+                               oldPassword:oldPassword
+                               newPassword:newPassword];
         }
     }];
 
@@ -75,8 +77,7 @@
 
 - (void)changePasswordWithUserId: (NSString *)userID
                      oldPassword:(NSString *)oldPassword
-                     newPassword:(NSString *)newPassword
-                  changePassword:(NSString *)changePassword{
+                     newPassword:(NSString *)newPassword {
     [self showHUD];
     [ApiRequest changePasswordWithUserId:userID oldPassword:oldPassword newPassword:newPassword completionBlock:^(ApiResponse *response, NSError *error) {
                 [self hideHUD];

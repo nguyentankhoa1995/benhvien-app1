@@ -46,7 +46,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - IQKeyboardManagerSwift (~> 4.0)
   - KASlideShow (~> 3.0)
-  - MBProgressHUD (~> 1.0.0)
+  - MBProgressHUD (~> 1.0)
   - NSUserDefaults+Utility (~> 0.1)
   - OCGoogleDirectionsAPI
   - PureLayout (~> 3.0)
@@ -67,6 +67,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: d41d9c6f0679e6da49c56893eb844ae0b211c35d
+PODFILE CHECKSUM: 786b174cf6e7ad1219ca16da011ea1677e559db8
 
 COCOAPODS: 1.2.1

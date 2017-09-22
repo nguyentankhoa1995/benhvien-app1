@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpY-qe-kev" userLabel="Account View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdG-9O-fFB">
+                        <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdG-9O-fFB">
                             <rect key="frame" x="0.0" y="43" width="375" height="57"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="00J-Qy-LKf">
@@ -43,7 +43,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUE-AT-2iy">
                                     <rect key="frame" x="50" y="0.0" width="325" height="57"/>
                                     <connections>
-                                        <action selector="didAccountScreenButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="jvi-NE-7bn"/>
+                                        <action selector="didAccountScreenButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="GIu-ff-MSj"/>
                                     </connections>
                                 </button>
                             </subviews>

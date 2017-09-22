@@ -54,16 +54,16 @@
     return cell;
 }
 
+- (IBAction)didAccountScreenButton:(id)sender {
+    if (self.onDidSelectHeader) {
+        self.onDidSelectHeader();
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:false];
     if (self.onDidSelectItemAtIndex){
         self.onDidSelectItemAtIndex(indexPath.row + 1);
-    }
-}
-
-- (IBAction)didAccountScreenButton:(id)sender {
-    if (self.onDidSelectHeader) {
-        self.onDidSelectHeader();
     }
 }
 

@@ -14,7 +14,7 @@
 
 @interface BaseTabBarController ()
 
-@property(strong,nonatomic) MenuView *menuView;
+@property(weak,nonatomic) MenuView *menuView;
 @property(strong,nonnull) UIWindow *window;
 @property(assign,nonatomic) BOOL didUpdateConstrians;
 
@@ -77,7 +77,7 @@
 
 - (void)didSelectMenuAtIndenx:(NSInteger)menuIndex {
     [self animatedMenu:!self.menuDisplayed];
-    self.selectedIndex = menuIndex;
+    self.selectedIndex = menuIndex ;
     if (menuIndex == 3) {
         [self logout];
     }

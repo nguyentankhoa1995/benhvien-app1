@@ -18,13 +18,9 @@
 @interface BaseViewController : UIViewController
 
 - (void)showHUD;
-
 - (void)hideHUD;
-
 -(void)showMenuButton;
-
 -(void)showBackButton;
-
 - (void)showMessage:(NSString *)title message:(NSString *)message;
 
 @end

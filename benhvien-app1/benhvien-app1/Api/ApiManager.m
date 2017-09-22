@@ -10,7 +10,10 @@
 #import "UserDataManager.h"
 
 
-@interface ApiManager() {
+@interface ApiManager()
+{
+
+
 }
 
 @property (strong, nonatomic) AFHTTPSessionManager *manager ;
@@ -32,7 +35,7 @@
 
 - (void)setupManger {
     self.manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
 }
 
 - (void)setUpHeader {
@@ -62,7 +65,7 @@
             break;
         }
         case PUT: {
-            [self processPostRequestWith:fullURL parameters:parameters completion:completion];
+            [self processPutRequestWith:fullURL parameters:parameters completion:completion];
             break;
         }
         default:

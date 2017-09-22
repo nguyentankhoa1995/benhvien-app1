@@ -30,7 +30,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     UIColor *_activityIndicatorColor;
     CGFloat _opacity;
 }
-
+@property (nonatomic, assign) BOOL removeFromSuperViewOnHide;
 @property (nonatomic, assign) BOOL useAnimation;
 @property (nonatomic, assign, getter=hasFinished) BOOL finished;
 @property (nonatomic, strong) UIView *indicator;
