@@ -37,6 +37,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - OCGoogleDirectionsAPI
   - PureLayout (~> 3.0)
   - SDWebImage (= 3.8.2)
+  - SVPullToRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -66,7 +68,8 @@ SPEC CHECKSUMS:
   OCGoogleDirectionsAPI: 03c35fbedfe01506b6270a94259969bc60d6f7ce
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
-PODFILE CHECKSUM: 786b174cf6e7ad1219ca16da011ea1677e559db8
+PODFILE CHECKSUM: 2a9e1aecfee21f039e6ec88a3bac1d664001cd9e
 
 COCOAPODS: 1.2.1

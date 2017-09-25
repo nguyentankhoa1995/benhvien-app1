@@ -32,15 +32,17 @@
                                           completion:completion];
 }
 
-+ (void)searchHospitalByCityandDistrict:(NSString *)city district:(NSString *)district completionBlock:(ApiCompletionBlock)completion {
++ (void)searchHospitalByCityandDistrict:(NSString *)city district:(NSString *)district page:(NSInteger )page completionBlock:(ApiCompletionBlock)completion {
+    
     NSDictionary *parameters = @{@"city":city,
-                               @"district":district,
-                               };
+                                 @"district":district,
+                                 @"page":@(page)};
     [[ApiManager shareClient]requestApiWithEndpoint:SearchByNameandDistrict method:GET parameters:parameters hasAuth:true completion:completion];
 }
 
-+ (void)searchHospitalByCity:(NSString *)city completionBlock:(ApiCompletionBlock)completion {
-    NSDictionary *paramenters = @{@"city":city};
++ (void)searchHospitalByCity:(NSString *)city page:(NSInteger)page completionBlock:(ApiCompletionBlock)completion {
+    NSDictionary *paramenters = @{@"city":city,
+                                  @"page":@(page)};
     [[ApiManager shareClient] requestApiWithEndpoint:SearchHospitalCity method:GET parameters:paramenters hasAuth:true completion:completion];
 }
 

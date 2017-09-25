@@ -16,4 +16,15 @@
 #define UserCity                        @"UserCity"
 #define UserFullName                    @"UserFullName"
 
+typedef enum {
+    DISTRICT,
+    CITY,
+    HOME
+}SearchType;
+
+typedef enum {
+    LOADMORE,
+    REFRESH
+}LoadMode;
+
 #endif /* Constants_h */

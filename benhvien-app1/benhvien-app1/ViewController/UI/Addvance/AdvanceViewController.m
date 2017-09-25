@@ -14,6 +14,7 @@
 #import "UIViewController+Storyboard.h"
 #import "ApiRequest.h"
 #import "Hospital.h"
+#import "Constants.h"
 
 @interface AdvanceViewController ()<IQDropDownTextFieldDelegate>
 {
@@ -119,19 +120,20 @@
 
 - (void)searchHospitalByCity:(NSString *)city {
     [self showHUD];
-    [ApiRequest searchHospitalByCity:city completionBlock:^(ApiResponse *response, NSError *error) {
+    [ApiRequest searchHospitalByCity:city page:1 completionBlock:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
         if (error) {
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
             NSArray *cityArray = [response.data objectForKey:@"hospitals"];
+          NSInteger pages = [[response.data valueForKey:@"pages"] integerValue];
             if(cityArray.count > 0) {
                 NSMutableArray *cities = [NSMutableArray new];
                 for (NSDictionary *citiesData in cityArray ){
                     Hospital *city = [Hospital initWithResponse:citiesData];
                     [cities addObject: city];
                 }
-                [self goToSearchResultViewController:cities];
+                [self goToSearchResultViewController:cities type:CITY city:city district:nil pages:pages];
             }else {
                 [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
             }
@@ -141,20 +143,21 @@
 
 - (void)searchHospital:(NSString *)city district:(NSString *)district {
     [self showHUD];
-    [ApiRequest searchHospitalByCityandDistrict:city district:district completionBlock:^(ApiResponse *response, NSError *error){
+    [ApiRequest searchHospitalByCityandDistrict:city district:district page:1 completionBlock:^(ApiResponse *response, NSError *error){
         [self hideHUD];
         if(error) {
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
             if(response.success) {
                 NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
+                NSInteger pages = [[response.data valueForKey:@"pages"] integerValue];
                 if(hospitalArray.count > 0) {
                     NSMutableArray *hospitals = [NSMutableArray new];
                     for (NSDictionary *hospitalsData in hospitalArray ){
                         Hospital *hos = [Hospital initWithResponse:hospitalsData];
                         [hospitals addObject: hos];
                     }
-                    [self goToSearchResultViewController:hospitals];
+                    [self goToSearchResultViewController:hospitals type:DISTRICT city:nil district:district pages:pages];
                 }else {
                     [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
                 }
@@ -165,9 +168,13 @@
     }];
 }
 
-- (void)goToSearchResultViewController:(NSMutableArray *)hospital{
+- (void)goToSearchResultViewController:(NSMutableArray *)hospital type:(SearchType)type city:(NSString *)city district:(NSString *)district pages:(NSInteger )pages {
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
     vc.hospitalList = hospital;
+    vc.type = type;
+    vc.city = city;
+    vc.dictrist = district;
+    vc.totalPage = pages;
     [self.navigationController pushViewController:vc animated:true];
 }
 

@@ -86,6 +86,7 @@
 - (void)passData :(NSMutableArray *)hospital {
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
     vc.hospitalList = hospital;
+    vc.type = HOME;
     [self.navigationController pushViewController:vc animated:true];
     
 }
