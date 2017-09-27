@@ -20,6 +20,7 @@
 #import "MapModel.h"
 #import "ImageModel.h"
 #import "DirectionViewController.h"
+#import "MapCell.h"
 
 @interface HospitalDetailViewController ()
 
@@ -32,6 +33,7 @@
     [self setupContentView];
     [self getHospitalId:_hospital.hospitalId];
     [self showDirectionButton];
+   
 }
 
 - (void)getHospitalId:(NSString *)hospitalId {
@@ -115,7 +117,19 @@
     [self.contentView registerCell:[ThumImageTableViewCell class] forModel:[ThumbImageModels class]];
     [self.contentView registerCell:[MapCell class] forModel:[MapModel class]];
     self.contentView.hidden = true;
+   
 }
+
+//- (void)configureCell:(Hospital *)hospital {
+//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:hospital.latitude longitude:hospital.longtitude zoom:15];
+//    _mapView.camera = camera;
+//    _mapView.myLocationEnabled = false;
+//    
+//    CLLocationCoordinate2D postion = CLLocationCoordinate2DMake(hospital.latitude, hospital.longtitude);
+//    GMSMarker *marker = [GMSMarker markerWithPosition:postion];
+//    marker.title = hospital.name;
+//    marker.map = self.mapView;
+//}
 
 - (NSArray *)getData {
     NSMutableArray *objArray = [NSMutableArray new];
@@ -139,4 +153,6 @@
     
     return [objArray mutableCopy];
 }
+
+
 @end

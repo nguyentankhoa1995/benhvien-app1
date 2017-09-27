@@ -322,7 +322,6 @@
 			children = (
 				EE3C1F2E1F31F62400F93EDB /* HospitalDetailViewController.h */,
 				EE3C1F2F1F31F62400F93EDB /* HospitalDetailViewController.m */,
-				EE3C1F301F31F62400F93EDB /* UITableViewCell */,
 			);
 			path = HospitalDetail;
 			sourceTree = "<group>";
@@ -349,7 +348,8 @@
 				EEAF4D271F4AFB5200E106B3 /* MapCell.m */,
 				EEAF4D241F4AFA8F00E106B3 /* MapCell.xib */,
 			);
-			path = UITableViewCell;
+			name = UITableViewCell;
+			path = ../../HospitalDetail/UITableViewCell;
 			sourceTree = "<group>";
 		};
 		EE3C1F3F1F31F62400F93EDB /* SearchResult */ = {
@@ -496,6 +496,7 @@
 		EE8E59D41F471D3B00C3DBEC /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				EE3C1F301F31F62400F93EDB /* UITableViewCell */,
 				EE8E59D51F471D3B00C3DBEC /* HospitalTableViewCell.h */,
 				EE8E59D61F471D3B00C3DBEC /* HospitalTableViewCell.m */,
 			);

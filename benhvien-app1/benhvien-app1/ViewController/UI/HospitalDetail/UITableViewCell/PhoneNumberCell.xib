@@ -19,16 +19,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-red-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CHs-j6-54G">
-                        <rect key="frame" x="5" y="6" width="15" height="14"/>
+                        <rect key="frame" x="10" y="7.5" width="15" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="14" id="Ee7-AS-Ljv"/>
+                            <constraint firstAttribute="width" constant="15" id="kgO-g9-8Bc"/>
+                            <constraint firstAttribute="height" constant="15" id="pbA-fY-q7m"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="08.39235791 - 39235821 - 39237007" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiK-Vj-udW">
-                        <rect key="frame" x="30" y="0.0" width="335" height="30"/>
+                        <rect key="frame" x="35" y="6.5" width="248" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="NJM-aL-uWN"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="n8w-ok-NnA"/>
+                            <constraint firstAttribute="height" constant="17" id="bRk-Kj-hGV"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.48627450980392156" green="0.50196078431372548" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,13 +36,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HiK-Vj-udW" firstAttribute="leading" secondItem="CHs-j6-54G" secondAttribute="trailing" constant="10" id="JnW-47-nSU"/>
-                    <constraint firstItem="CHs-j6-54G" firstAttribute="leading" secondItem="Yvc-Er-3GH" secondAttribute="leading" constant="5" id="Mbc-Tb-YUh"/>
-                    <constraint firstItem="HiK-Vj-udW" firstAttribute="top" secondItem="Yvc-Er-3GH" secondAttribute="top" id="ZR7-Ah-wEf"/>
-                    <constraint firstAttribute="trailing" secondItem="HiK-Vj-udW" secondAttribute="trailing" constant="10" id="fNw-OD-eI5"/>
-                    <constraint firstAttribute="bottom" secondItem="HiK-Vj-udW" secondAttribute="bottom" id="ow6-tS-glX"/>
-                    <constraint firstItem="CHs-j6-54G" firstAttribute="top" secondItem="Yvc-Er-3GH" secondAttribute="top" constant="6" id="s6Z-aL-nGM"/>
-                    <constraint firstAttribute="bottom" secondItem="CHs-j6-54G" secondAttribute="bottom" constant="9" id="zdH-Rm-bfv"/>
+                    <constraint firstItem="CHs-j6-54G" firstAttribute="leading" secondItem="Yvc-Er-3GH" secondAttribute="leading" constant="10" id="5Ax-Zr-cpC"/>
+                    <constraint firstItem="HiK-Vj-udW" firstAttribute="centerY" secondItem="Yvc-Er-3GH" secondAttribute="centerY" id="8qe-4h-IkP"/>
+                    <constraint firstItem="HiK-Vj-udW" firstAttribute="leading" secondItem="CHs-j6-54G" secondAttribute="trailing" constant="10" id="Ljn-Od-08F"/>
+                    <constraint firstItem="CHs-j6-54G" firstAttribute="centerY" secondItem="Yvc-Er-3GH" secondAttribute="centerY" id="tTF-RC-cyd"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="PhoneNumberCell"/>

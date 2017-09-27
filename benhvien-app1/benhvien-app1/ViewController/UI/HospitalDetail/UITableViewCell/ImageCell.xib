@@ -21,15 +21,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-la-S1U" customClass="KASlideShow">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="yNQ-wE-N7d"/>
+                            <constraint firstAttribute="height" constant="300" id="7aD-VZ-seO"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="ArR-ux-4NB"/>
-                    <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="EsV-kj-X1P"/>
-                    <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="dDO-Rw-I5d"/>
-                    <constraint firstItem="uuy-la-S1U" firstAttribute="leading" secondItem="IXN-sC-ObB" secondAttribute="leading" id="iVX-js-YNG"/>
+                    <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="WK7-go-grZ"/>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="cwv-65-rd2"/>
+                    <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="mVj-Eq-4FE"/>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="leading" secondItem="IXN-sC-ObB" secondAttribute="leading" id="okF-gs-xFD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

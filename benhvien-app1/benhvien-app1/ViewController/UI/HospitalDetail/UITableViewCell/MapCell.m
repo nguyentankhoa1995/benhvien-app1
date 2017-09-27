@@ -20,19 +20,13 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCell:(id)model {
-    MapModel *hos = (MapModel *)model;
-    if(hos) {
-        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:hos.latitude longitude:hos.longtitude zoom:15];
-        
-        GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-        
-        GMSMarker *marker = [GMSMarker new];
-        marker.position = CLLocationCoordinate2DMake(hos.latitude, hos.longtitude);
-        [marker setAppearAnimation:kGMSMarkerAnimationPop];
-        marker.icon = [UIImage imageNamed:@"flag_icon"];
-        marker.map = mapView;
-       self.MapView = mapView;
-    }
+- (void)configureCell:(Hospital *)hospital {
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:hospital.latitude longitude:hospital.longtitude zoom:15];
+    _MapView.camera = camera;
+    _MapView.myLocationEnabled = false;
+    
+    CLLocationCoordinate2D postion = CLLocationCoordinate2DMake(hospital.latitude, hospital.longtitude);
+    GMSMarker *marker = [GMSMarker markerWithPosition:postion];
+    marker.map = self.MapView;
 }
 @end

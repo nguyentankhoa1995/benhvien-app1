@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSString *street;
 @property (strong, nonatomic) NSDictionary *response;
 
+
 +(instancetype)initWithResponse:(NSDictionary *)response;
 
 @end

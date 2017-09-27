@@ -16,5 +16,5 @@ target 'benhvien-app1' do
   pod 'OCGoogleDirectionsAPI'
   pod 'HNKGooglePlacesAutocomplete'
   pod 'NSUserDefaults+Utility', '~> 0.1'
-  pod 'SVPullToRefresh'
+  pod 'SVPullToRefresh', '~> 0.4'
 end

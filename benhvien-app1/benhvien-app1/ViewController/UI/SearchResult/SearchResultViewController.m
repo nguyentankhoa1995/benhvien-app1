@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Kết quả";
+//   [self.resultTableView registerNib:[UINib nibWithNibName:@"HospitalTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.resultTableView.tableFooterView = [UIView new];
     __weak SearchResultViewController *wSelf = self;
     [self.resultTableView addPullToRefreshWithActionHandler:^{
@@ -36,11 +37,11 @@
         }
         
         if (wSelf.type == CITY) {
-            [wSelf loadMoreCity];
+            [wSelf refreshCity];
         }
         
         if (wSelf.type == DISTRICT) {
-            
+            [wSelf refreshDistrict];
         }
     }];
     [self.resultTableView addInfiniteScrollingWithActionHandler:^{
@@ -146,16 +147,16 @@
         if (error) {
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
-            NSArray *cityArray = [response.data objectForKey:@"hospitals"];
+            NSMutableArray *cityArray = [response.data objectForKey:@"hospitals"];
             if(cityArray.count > 0) {
                 NSMutableArray *cities = [NSMutableArray new];
                 for (NSDictionary *citiesData in cityArray ){
                     Hospital *city = [Hospital initWithResponse:citiesData];
                     [cities addObject: city];
-                    [wSelf displayData:_hospitalList currentPage:page loadMode:loadMode];
+                    
                 }
-            }else {
-                [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+                [wSelf displayData:cities currentPage:page loadMode:loadMode];
+
             }
         }
     }];
@@ -169,19 +170,16 @@
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
             if(response.success) {
-                NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
+                NSMutableArray *hospitalArray = [response.data objectForKey:@"hospitals"];
                 if(hospitalArray.count > 0) {
                     NSMutableArray *hospitals = [NSMutableArray new];
                     for (NSDictionary *hospitalsData in hospitalArray ){
                         Hospital *hos = [Hospital initWithResponse:hospitalsData];
                         [hospitals addObject: hos];
                     }
-                                    }else {
-                    [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
                 }
-            }else {
-                [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
             }
+            
         }
     }];
 }

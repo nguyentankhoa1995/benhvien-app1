@@ -116,7 +116,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfJ-PI-EPt" userLabel="PictureView">
-                                                <rect key="frame" x="97.5" y="32.5" width="180" height="190"/>
+                                                <rect key="frame" x="98" y="33" width="180" height="190"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MVX-rA-Zw2">
                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="185"/>
@@ -179,7 +179,7 @@
                                         <rect key="frame" x="0.0" y="256" width="375" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ Tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4X-1m-4FI">
-                                                <rect key="frame" x="10" y="12.5" width="55" height="20"/>
+                                                <rect key="frame" x="10" y="13" width="55" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Pje-pV-7dg"/>
                                                     <constraint firstAttribute="height" constant="20" id="sku-VX-4BT"/>
@@ -189,7 +189,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username-icon" translatesAutoresizingMaskIntoConstraints="NO" id="e4T-fz-nwP">
-                                                <rect key="frame" x="95" y="12.5" width="18" height="20"/>
+                                                <rect key="frame" x="95" y="13" width="18" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="18" id="WuT-Qy-VNh"/>
                                                     <constraint firstAttribute="height" constant="20" id="fiZ-9X-X9l"/>
@@ -228,7 +228,7 @@
                                         <rect key="frame" x="0.0" y="302" width="375" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmi-eg-7TO">
-                                                <rect key="frame" x="10" y="12.5" width="41" height="20"/>
+                                                <rect key="frame" x="10" y="13" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="wpu-9Q-4qG"/>
                                                 </constraints>
@@ -283,7 +283,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CFm-BX-grP">
-                                                <rect key="frame" x="96" y="12.5" width="15" height="20"/>
+                                                <rect key="frame" x="96" y="13" width="15" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="97y-5j-84v"/>
                                                     <constraint firstAttribute="width" constant="15" id="GfL-9L-CRG"/>
@@ -323,7 +323,7 @@
                                         <rect key="frame" x="0.0" y="394" width="375" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WP-9V-YeM">
-                                                <rect key="frame" x="10" y="12.5" width="83" height="20"/>
+                                                <rect key="frame" x="10" y="13" width="83" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="mNc-u6-Bnu"/>
                                                 </constraints>
@@ -332,7 +332,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-RZ-2rM">
-                                                <rect key="frame" x="98" y="12.5" width="15" height="20"/>
+                                                <rect key="frame" x="98" y="13" width="15" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="2fx-oj-Lnx"/>
                                                     <constraint firstAttribute="height" constant="20" id="U4D-TM-7Wy"/>
@@ -801,7 +801,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username-icon" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-iG-5Xs">
-                                                <rect key="frame" x="87" y="12.5" width="18" height="20"/>
+                                                <rect key="frame" x="87" y="13" width="18" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dNB-cC-bjs"/>
                                                     <constraint firstAttribute="width" constant="18" id="rzP-tE-LQn"/>
@@ -1403,9 +1403,38 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mz7-cM-8LB">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBc-Mr-KGW">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="50"/>
+                                        <color key="backgroundColor" red="0.48627450980392156" green="0.50196078431372548" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="187.5" id="3A3-Dg-j3w"/>
+                                            <constraint firstAttribute="height" constant="50" id="YMa-iw-OTl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Gọi điện" image="phone-call-icon">
+                                            <color key="titleColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-rF-jvc">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" red="0.16862745098039217" green="0.55294117647058827" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Nhắn tin" image="sms-message-icon">
+                                            <color key="titleColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2lB-Pp-uri"/>
+                                    <constraint firstItem="JBc-Mr-KGW" firstAttribute="leading" secondItem="Mz7-cM-8LB" secondAttribute="leading" id="5OD-rW-u12"/>
+                                    <constraint firstItem="JBc-Mr-KGW" firstAttribute="top" secondItem="Mz7-cM-8LB" secondAttribute="top" id="Aev-af-bp2"/>
+                                    <constraint firstAttribute="bottom" secondItem="4fK-rF-jvc" secondAttribute="bottom" id="GCa-bm-CIl"/>
+                                    <constraint firstItem="4fK-rF-jvc" firstAttribute="leading" secondItem="JBc-Mr-KGW" secondAttribute="trailing" id="WVy-s8-aLB"/>
+                                    <constraint firstItem="4fK-rF-jvc" firstAttribute="top" secondItem="Mz7-cM-8LB" secondAttribute="top" id="hek-Aa-AHI"/>
+                                    <constraint firstAttribute="bottom" secondItem="JBc-Mr-KGW" secondAttribute="bottom" id="t2q-GH-jgQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4fK-rF-jvc" secondAttribute="trailing" id="ycP-YJ-Y3w"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="835-5D-1qF" customClass="HLTableView">
@@ -1523,9 +1552,11 @@
         <image name="first-login-bg" width="375" height="667"/>
         <image name="location-icon" width="15" height="21"/>
         <image name="password-icon" width="15" height="20"/>
+        <image name="phone-call-icon" width="24" height="24"/>
         <image name="right-arrow" width="9" height="14"/>
         <image name="search-btn-icon" width="30" height="31"/>
         <image name="select-photo-btn" width="96" height="40"/>
+        <image name="sms-message-icon" width="20" height="25"/>
         <image name="username-icon" width="14" height="17"/>
     </resources>
 </document>

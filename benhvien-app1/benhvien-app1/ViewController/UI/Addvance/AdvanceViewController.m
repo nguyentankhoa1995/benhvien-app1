@@ -135,7 +135,7 @@
                 }
                 [self goToSearchResultViewController:cities type:CITY city:city district:nil pages:pages];
             }else {
-                [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+                [self showMessage:@"Thông báo" message:@"Không tìm thấy bệnh viện nào"];
             }
         }
     }];
@@ -148,21 +148,17 @@
         if(error) {
             [self showMessage:@"Lỗi" message:error.localizedDescription];
         }else {
-            if(response.success) {
-                NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
-                NSInteger pages = [[response.data valueForKey:@"pages"] integerValue];
-                if(hospitalArray.count > 0) {
-                    NSMutableArray *hospitals = [NSMutableArray new];
-                    for (NSDictionary *hospitalsData in hospitalArray ){
-                        Hospital *hos = [Hospital initWithResponse:hospitalsData];
-                        [hospitals addObject: hos];
-                    }
-                    [self goToSearchResultViewController:hospitals type:DISTRICT city:nil district:district pages:pages];
-                }else {
-                    [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+            NSArray *hospitalArray = [response.data objectForKey:@"hospitals"] ;
+            NSInteger pages = [[response.data objectForKey:@"pages"]integerValue];
+            if (hospitalArray.count > 0) {
+                NSMutableArray *hospitals = [NSMutableArray new];
+                for (NSDictionary *hospitalsData in hospitalArray) {
+                    Hospital *hospital = [Hospital initWithResponse:hospitalsData];
+                    [hospitals addObject:hospital];
                 }
+                [self goToSearchResultViewController:hospitals type:CITY city:city district:nil pages:pages];
             }else {
-                [self showMessage:@"Lỗi" message:@"Không tìm thấy bệnh viện nào"];
+                [self showMessage:@"Thông báo" message:@"Không tìm thấy bệnh viện nào"];
             }
         }
     }];

@@ -36,7 +36,7 @@
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Huỷ bỏ" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed:)];
     self.navigationItem.leftBarButtonItem = cancelButton;
-    [self showLogin];
+    [self showRegister];
 }
 
 - (void)showLogin {
