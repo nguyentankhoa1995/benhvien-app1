@@ -17,8 +17,6 @@
 
 +(instancetype)initWithResponse:(NSDictionary *)response;
 
-- (void)parsenResponse:(NSDictionary *)responsel;
-
 @end
 
 //singleton la vung nho doc lap, ton tai suot qua trinh tao app, va bi huy khi kill projects 

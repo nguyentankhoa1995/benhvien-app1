@@ -45,9 +45,10 @@
     __weak BaseTabBarController *wSelf = self;
     [_menuView setOnDidSelectItemAtIndex:^(NSUInteger index) {
         [wSelf didSelectMenuAtIndenx:index];
+    }];
+    
     [_menuView setOnDidSelectHeader:^{
         [wSelf didSelectMenuAtIndenx:0];
-    }];
     }];
 }
 

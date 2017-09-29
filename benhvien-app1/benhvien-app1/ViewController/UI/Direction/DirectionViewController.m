@@ -63,6 +63,7 @@
             
             NSArray *routesArray = response.routes;
             GMSPolyline *polyline = nil;
+            
             if (routesArray.count > 0) {
                 OCDirectionsRoute *route = [response route];
                 OCDirectionsPolyline *overViewPolyline = route.overviewPolyline;

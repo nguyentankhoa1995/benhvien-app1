@@ -12,6 +12,7 @@
 #import "AccountViewController.h"
 #import "BaseNavigationController.h"
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 
 @interface MenuView()<UITableViewDelegate,UITableViewDataSource>
 
@@ -46,11 +47,27 @@
     if (!cell) {
         cell = [[MenuViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuViewCell"];
     }
+    
     NSDictionary *dic = _menuItems[indexPath.row];
     NSString *imgName = [dic objectForKey:@"icon"];
     NSString *title = [dic objectForKey: @"title"];
     cell.iconImage.image = [UIImage imageNamed:imgName];
     cell.titleLabel.text = title;
+    UIView *view = [UIView new];
+    view.backgroundColor = [[UIColor alloc]initWithRed:226.0/255 green:56.0/255.0 blue:67.0/255.0 alpha:1 ];
+    cell.selectedBackgroundView = view;
+//    if (cell se) {
+//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:226.0/255 green:56.0/255.0 blue:67.0/255.0 alpha:1 ];
+//    }else {
+//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0];
+//    }
+//    
+//    if ([cell.titleLabel.text isEqualToString:@"Thông tin"]) {
+//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:226.0/255 green:56.0/255.0 blue:67.0/255.0 alpha:1 ];
+//    }else {
+//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0];
+//    }
+
     return cell;
 }
 
@@ -64,8 +81,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:false];
     if (self.onDidSelectItemAtIndex){
         self.onDidSelectItemAtIndex(indexPath.row + 1);
+        
     }
 }
-
 
 @end

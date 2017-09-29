@@ -21,7 +21,12 @@
 }
 
 - (void)configureCell:(Hospital *)hospital {
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:hospital.latitude longitude:hospital.longtitude zoom:15];
+    GMSCameraPosition *camera =
+    [GMSCameraPosition cameraWithLatitude:hospital.latitude
+                                longitude:hospital.longtitude
+                                     zoom:15
+                                  bearing:30
+                             viewingAngle:40];
     _MapView.camera = camera;
     _MapView.myLocationEnabled = false;
     

@@ -75,11 +75,11 @@
 }
 
 
-- (void)changePasswordWithUserId: (NSString *)userID
+- (void)changePasswordWithUserId: (NSString *)userId
                      oldPassword:(NSString *)oldPassword
                      newPassword:(NSString *)newPassword {
     [self showHUD];
-    [ApiRequest changePasswordWithUserId:userID oldPassword:oldPassword newPassword:newPassword completionBlock:^(ApiResponse *response, NSError *error) {
+    [ApiRequest changePasswordWithUserId:userId oldPassword:oldPassword newPassword:newPassword completionBlock:^(ApiResponse *response, NSError *error) {
                 [self hideHUD];
             if (error || !response.success) {
                 [self showMessage:@"Lỗi" message:response.message];

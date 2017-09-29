@@ -7,8 +7,12 @@
 //
 
 #import "MenuViewCell.h"
+#import "HomeViewController.h"
+#import "BaseNavigationController.h"
+#import "AppDelegate.h"
+#import "AppInfoViewController.h"
 
-@implementation MenuViewCell
+@implementation MenuViewCell 
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,5 +24,6 @@
     
     // Configure the view for the selected state
 }
+
 
 @end

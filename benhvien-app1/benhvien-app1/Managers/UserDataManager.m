@@ -38,7 +38,7 @@
 
 - (void)setUserData:(NSDictionary *)data {
     self.accessToken = [data objectForKey:@"token"];
-    self.userId = [data objectForKey:@"userID"];
+    self.userId = [data objectForKey:@"userId"];
     self.email = [data objectForKey:@"email"];
     self.role = [data objectForKey:@"role"];
     self.city = [data objectForKey:@"city"];
