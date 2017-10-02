@@ -26,6 +26,7 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="uuy-la-S1U" firstAttribute="centerY" secondItem="IXN-sC-ObB" secondAttribute="centerY" id="KAb-65-Zpd"/>
                     <constraint firstAttribute="bottom" secondItem="uuy-la-S1U" secondAttribute="bottom" id="WK7-go-grZ"/>
                     <constraint firstItem="uuy-la-S1U" firstAttribute="top" secondItem="IXN-sC-ObB" secondAttribute="top" id="cwv-65-rd2"/>
                     <constraint firstAttribute="trailing" secondItem="uuy-la-S1U" secondAttribute="trailing" id="mVj-Eq-4FE"/>

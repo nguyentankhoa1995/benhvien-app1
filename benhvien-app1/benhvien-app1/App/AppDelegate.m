@@ -66,12 +66,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     AccountViewController *accountVC = (AccountViewController *)[AccountViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *accountNav = [[BaseNavigationController alloc] initWithRootViewController:accountVC];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+     
     HomeViewController *homeVC = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *homeNav = [[BaseNavigationController alloc] initWithRootViewController:homeVC];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
     AppInfoViewController *appInfoVC = (AppInfoViewController *)[AppInfoViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *appInfonNav = [[BaseNavigationController alloc] initWithRootViewController:appInfoVC];
     

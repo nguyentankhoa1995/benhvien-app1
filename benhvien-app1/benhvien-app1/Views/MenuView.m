@@ -56,18 +56,6 @@
     UIView *view = [UIView new];
     view.backgroundColor = [[UIColor alloc]initWithRed:226.0/255 green:56.0/255.0 blue:67.0/255.0 alpha:1 ];
     cell.selectedBackgroundView = view;
-//    if (cell se) {
-//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:226.0/255 green:56.0/255.0 blue:67.0/255.0 alpha:1 ];
-//    }else {
-//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0];
-//    }
-//    
-//    if ([cell.titleLabel.text isEqualToString:@"Thông tin"]) {
-//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:226.0/255 green:56.0/255.0 blue:67.0/255.0 alpha:1 ];
-//    }else {
-//        cell.contentView.backgroundColor = [[UIColor alloc]initWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0];
-//    }
-
     return cell;
 }
 

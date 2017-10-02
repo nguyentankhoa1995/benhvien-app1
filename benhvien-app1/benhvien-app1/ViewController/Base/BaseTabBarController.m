@@ -15,7 +15,6 @@
 @interface BaseTabBarController ()
 
 @property(weak,nonatomic) MenuView *menuView;
-@property(strong,nonnull) UIWindow *window;
 @property(assign,nonatomic) BOOL didUpdateConstrians;
 
 @end
@@ -38,8 +37,8 @@
                           @{@"icon":@"logout-icon",@"title":@"Đăng xuất"}];
     NSArray *nibViews = [[NSBundle mainBundle]loadNibNamed:@"MenuView" owner:self options:nil];
     _menuView = (MenuView *)[nibViews objectAtIndex:0];
-   self.window = [[[UIApplication sharedApplication] delegate]window];
-    [self.window addSubview:_menuView];
+    UIWindow *window = [[[UIApplication sharedApplication] delegate]window];
+    [window addSubview:_menuView];
     [_menuView setupMenuView];
     _menuView.menuItems = hosArray;
     __weak BaseTabBarController *wSelf = self;
@@ -53,10 +52,11 @@
 }
 
 - (void)updateViewConstraints {
-    [_menuView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_window];
-    [_menuView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:_window];
-    [_menuView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:_window];
-    [_menuView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:_window];
+    UIWindow *window = [[[UIApplication sharedApplication] delegate]window];
+    [_menuView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:window];
+    [_menuView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:window];
+    [_menuView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:window];
+    [_menuView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:window];
     [super updateViewConstraints];
 }
 

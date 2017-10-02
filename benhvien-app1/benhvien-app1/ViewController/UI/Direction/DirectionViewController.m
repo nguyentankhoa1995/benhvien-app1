@@ -48,7 +48,7 @@
 - (void)drawDirectionPathWithOriginLocation:(CLLocation *)origin destinationLocation:(CLLocation *)destination {
     OCDirectionsRequest *request = [OCDirectionsRequest requestWithOriginLocation:origin andDestinationLocation:destination];
     OCDirectionsAPIClient *client = [OCDirectionsAPIClient new];
-    [self showHUD];
+   [self showHUD];
     [client directions:request response:^(OCDirectionsResponse *response, NSError *error){
         [self hideHUD];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -61,7 +61,8 @@
                 return ;
             }
             
-            NSArray *routesArray = response.routes;
+            NSArray *routesArray = [NSArray new];
+            routesArray = response.routes;
             GMSPolyline *polyline = nil;
             
             if (routesArray.count > 0) {
@@ -78,7 +79,6 @@
                 polyline = [GMSPolyline polylineWithPath:path];
             }
             if (polyline) {
-                
                 GMSMarker *marker2 = [GMSMarker new];
                 marker2.position = CLLocationCoordinate2DMake(_hospital.latitude, _hospital.longtitude);
                 [marker2 setAppearAnimation:kGMSMarkerAnimationPop];

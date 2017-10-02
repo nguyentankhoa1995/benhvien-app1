@@ -31,7 +31,7 @@
                             <constraint firstAttribute="height" constant="17" id="bRk-Kj-hGV"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.48627450980392156" green="0.50196078431372548" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.5607843137254902" green="0.57647058823529407" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
